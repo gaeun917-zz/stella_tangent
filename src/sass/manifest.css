@@ -549,7 +549,7 @@ a:focus, a:hover, .card.slick-slide {
         .partners .main_div-right .container .blocks .block:hover .block__body {
           position: absolute;
           top: 0;
-          background: #3399ff;
+          background: linear-gradient(rgba(41, 128, 184, 0.8), rgba(41, 128, 184, 0.8)) no-repeat;
           color: #fff;
           height: 100%;
           transition: top 0.5s;
@@ -557,7 +557,8 @@ a:focus, a:hover, .card.slick-slide {
           .partners .main_div-right .container .blocks .block:hover .block__body h3 {
             color: #fff; }
       .partners .main_div-right .container .blocks .block img {
-        max-width: 600px; }
+        max-width: 600px;
+        margin: 0 auto; }
       .partners .main_div-right .container .blocks .block p {
         margin: 3em;
         font-size: 1rem; }
@@ -565,7 +566,9 @@ a:focus, a:hover, .card.slick-slide {
         text-decoration: none;
         color: white; }
         .partners .main_div-right .container .blocks .block__body a img {
-          padding: 5em 1em 1em 1em; }
+          max-width: 200px;
+          padding: 5em 1em 1em 1em;
+          opacity: 1; }
 
   .partners .container {
     margin-top: 40px;
@@ -814,7 +817,7 @@ a:focus, a:hover, .card.slick-slide {
     .product .container .row .main_div-left {
       padding: 0; }
       .product .container .row .main_div-left .card {
-        max-width: 303px;
+        max-width: 472px;
         margin-bottom: 2%; }
       .product .container .row .main_div-left .card.first {
         left: 10px;
