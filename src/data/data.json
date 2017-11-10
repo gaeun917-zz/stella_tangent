@@ -1,0 +1,401 @@
+{
+  "top4": {
+    "title": "Top 4 criteria for choosing an E-commerce Agency",
+    "item": [
+      {
+        "title": "Business Understanding",
+        "description": "Securing visitors' trust is paramount when selling luxury goods online. We have developed tried and tested methods for accruing credibility.",
+        "link": "See for yourself",
+        "img": "./images/top-best.png"
+      },
+      {
+        "title": "Technical Skills",
+        "description": "Securing visitors' trust is paramount when selling luxury goods online. We have developed tried and tested methods for accruing credibility.",
+        "link": "Which skills",
+        "img": "./images/top-business.png"
+      },
+      {
+        "title": "Best Practice",
+        "description": "Securing visitors' trust is paramount when selling luxury goods online. We have developed tried and tested methods for accruing credibility.",
+        "link": "Everything else",
+        "img": "./images/top-tech.png"
+      },
+      {
+        "title": "Track Record",
+        "description": "Securing visitors' trust is paramount when selling luxury goods online. We have developed tried and tested methods for accruing credibility.",
+        "link": "This is what",
+        "img": "./images/top-track.png"
+      }
+    ]
+  },
+
+  "header": {
+    "logo": "./images/header_logo.svg",
+    "item": [
+      {
+        "title": "WHY US?"
+      },
+      {
+        "title": "E-COMMERCE ",
+        "sub_category": [
+          {
+            "title": "PLAN",
+            "item": [
+              {
+                "title": "Consulting / Strategy"
+              },
+              {
+                "title": "Brand Identity "
+              },
+              {
+                "title": "Design & User Experience"
+              }
+            ]
+          },
+          {
+            "title": "BUILD",
+            "item": [
+              {
+                "title": "Website Development"
+              },
+              {
+                "title": "Platform Integraton"
+              },
+              {
+                "title": "Marketplace "
+              },
+              {
+                "title": "Third Party"
+              },
+              {
+                "title": "Google Analytics"
+              }
+            ]
+          },
+          {
+            "title": "SUPPORT",
+            "item": [
+              {
+                "title": "Consulting / Strategy"
+              },
+              {
+                "title": "Managed Hosting"
+              },
+              {
+                "title": "Design & User Experience"
+              },
+              {
+                "title": "Website Development"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "title": "DIGITAL MARKETING ",
+        "sub_category": [
+          {
+            "title": "PLAN",
+            "item": [
+              {
+                "title": "Consulting / Strategy"
+              },
+              {
+                "title": "Brand Identity "
+              },
+              {
+                "title": "Design & User Experience"
+              }
+            ]
+          },
+          {
+            "title": "BUILD",
+            "item": [
+              {
+                "title": "Website Development"
+              },
+              {
+                "title": "Platform Integraton"
+              },
+              {
+                "title": "Marketplace "
+              },
+              {
+                "title": "Third Party"
+              },
+              {
+                "title": "Google Analytics"
+              }
+            ]
+          },
+          {
+            "title": "SUPPORT",
+            "item": [
+              {
+                "title": "Consulting / Strategy"
+              },
+              {
+                "title": "Managed Hosting"
+              },
+              {
+                "title": "Design & User Experience"
+              },
+              {
+                "title": "Website Development"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "title": "SOFTWARE DEVELOPMENT",
+        "sub_category": [
+          {
+            "title": "PLAN",
+            "item": [
+              {
+                "title": "Consulting / Strategy"
+              },
+              {
+                "title": "Brand Identity "
+              },
+              {
+                "title": "Design & User Experience"
+              }
+            ]
+          },
+          {
+            "title": "BUILD",
+            "item": [
+              {
+                "title": "Website Development"
+              },
+              {
+                "title": "Platform Integraton"
+              },
+              {
+                "title": "Marketplace "
+              },
+              {
+                "title": "Third Party"
+              },
+              {
+                "title": "Google Analytics"
+              }
+            ]
+          },
+          {
+            "title": "SUPPORT",
+            "item": [
+              {
+                "title": "Consulting / Strategy"
+              },
+              {
+                "title": "Managed Hosting"
+              },
+              {
+                "title": "Design & User Experience"
+              },
+              {
+                "title": "Website Development"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "title": "OUR WORK"
+      },
+      {
+        "title": "PARTNERS"
+      },
+      {
+        "title": "NEWS/BLOG"
+      },
+      {
+        "title": "CONTACT"
+      }
+    ]
+  },
+
+  "bespoke": {
+    "item": [
+      {
+        "tab": "STARTUP E-COMMERCE WEBSITE",
+        "title": "MEASURE THE IMPACT YOUR WEBSITE HAS ON YOUR BUSINESS",
+        "desc": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."
+      },
+      {
+        "tab": "BESPOKE E-COMMERCE WEBSITE",
+        "title": "MEASURE THE IMPACT YOUR WEBSITE HAS ON YOUR BUSINESS",
+        "desc": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."
+      },
+      {
+        "tab": "BESPOKE WEBSITE / SOFTWARE",
+        "title": "MEASURE THE IMPACT YOUR WEBSITE HAS ON YOUR BUSINESS",
+        "desc": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."
+      }
+    ]
+  },
+
+  "testimonial": {
+    "item": [
+      {
+        "who": "<em>Adam Badini</em> from Otherland Inc.",
+        "title": "An exceptional software was developed by Be Mememorable",
+        "desc": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries.",
+        "img": "testimonial-person.png"
+      },
+      {
+        "who": "<em>Adam Badini</em> from Otherland Inc.",
+        "title": "An exceptional software was developed by Be Mememorable",
+        "desc": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries.",
+        "img": "testimonial-person.png"
+      },
+      {
+        "who": "<em>Adam Badini</em> from Otherland Inc.",
+        "title": "An exceptional software was developed by Be Mememorable",
+        "desc": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries.",
+        "img": "testimonial-person.png"
+      }
+    ]
+  },
+
+  "latest": {
+    "title": " LATEST WORK",
+    "sub_title": "Securing visitors' trust is paramount when selling luxury goods online. We have developed tried and tested methods for accruing credibility."
+  },
+
+  "service": {
+    "title": "SERVICES WE PROVIDE",
+    "sub_title": "We are specialist in development beautiful pants and securing visitors' trust is paramount when selling luxury goods online. We have developed tried and tested methods for accruing credibility.",
+    "item1": [
+      {
+        "title": "E-COMMERCE STRATEGY  & PLANNING",
+        "desc": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries."
+      },
+      {
+        "title": "MAGENTO & WOO-COMMERCE DEVELOPMENT ",
+        "desc": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lore m Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting."
+      },
+      {
+        "title": "DIGITAL MARKETING",
+        "desc": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. "
+      }
+    ],
+    "item2": [
+      {
+        "title": "DESIGN & UX",
+        "desc": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged."
+      },
+      {
+        "title": "MARKETPLACE INTEGRATION",
+        "desc": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged."
+      },
+      {
+        "title": "MOBILE APPLICATIONS",
+        "desc": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged."
+      }
+    ]
+  },
+  "news": {
+    "title": "FEATURED NEWS",
+    "item": [
+      {
+        "title": "Cutting edge website design",
+        "sub_title": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s."
+      },
+      {
+        "title": "Cutting edge website design",
+        "sub_title": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s."
+      }
+    ]
+  },
+  "footer": {
+    "company": {
+      "title": "COMPANY",
+      "sub_title": [
+        {
+          "title": "About us"
+        },
+        {
+          "title": "Why us?"
+        },
+        {
+          "title": "Partners"
+        },
+        {
+          "title": "Testimonials"
+        },
+        {
+          "title": "Careers"
+        },
+        {
+          "title": "Contact"
+        }
+      ]
+    },
+    "service": {
+      "title": "SERVICES",
+      "sub_title": [
+        {
+          "title": "E-Commerce"
+        },
+        {
+          "title": "Digital Marketing"
+        },
+        {
+          "title": "Software Development"
+        },
+        {
+          "title": "Request a Quote"
+        },
+        {
+          "title": "FAQ’s"
+        }
+      ]
+    },
+    "legal": {
+      "title": "LEGAL",
+      "sub_title": [
+        {
+          "title": "Privacy Policy"
+        },
+        {
+          "title": "Terms & Conditions"
+        },
+        {
+          "title": "Cookie Policy"
+        }
+      ]
+    },
+    "logo": {
+      "item": [
+        {
+          "alt": "rockspace",
+          "img": "./img/footer-logo_rock.png"
+        },
+        {
+          "alt": "ad_words",
+          "img": "./img/footer-logo_googlead.png"
+        },
+        {
+          "alt": "sage",
+          "img": "./img/footer-logo_sage.png"
+        },
+        {
+          "alt": "amazon",
+          "img": "./img/footer-logo_amazone.png"
+        },
+        {
+          "alt": "paypal",
+          "img": "./img/footer-logo_paypal.png"
+        },
+        {
+          "alt": "ogone",
+          "img": "./img/footer-logo_ogone.png"
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "name": "artha_home",
+  "short_name": "artha_home",
+  "description": "artha index page",
+  "main": "",
+  "authors": [
+    "Stella Lee"
+  ],
+  "license": "ISC",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components"
+  ],
+  "dependencies": {
+    "counterup": "^1.0.0",
+    "jquery": "^3.2.1",
+    "bootstrap": "v4.0.0-alpha.6",
+    "slick-carousel": "^1.8.1"
+  }
+}

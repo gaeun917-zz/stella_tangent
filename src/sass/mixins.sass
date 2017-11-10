@@ -1,0 +1,147 @@
+@mixin box-sizing
+  -webkit-box-sizing: border-box
+  -moz-box-sizing: border-box
+  -ms-box-sizing: border-box
+  -o-box-sizing: border-box
+  box-sizing: border-box
+
+@mixin no-select
+  -webkit-touch-callout: none
+  -webkit-user-select: none
+  -khtml-user-select: none
+  -moz-user-select: none
+  -ms-user-select: none
+  user-select: none
+
+@mixin no-pointer-events
+  pointer-events: none
+
+@mixin box-shadow($horizontal, $vertical, $blur, $spread, $rgba)
+  -webkit-box-shadow: $horizontal $vertical $blur $spread $rgba
+  -moz-box-shadow: $horizontal $vertical $blur $spread $rgba
+  -ms-box-shadow: $horizontal $vertical $blur $spread $rgba
+  -o-box-shadow: $horizontal $vertical $blur $spread $rgba
+  box-shadow: $horizontal $vertical $blur $spread $rgba
+
+@mixin text-shadow($horizontal, $vertical, $blur, $rgba)
+  -webkit-text-shadow: $horizontal $vertical $blur $rgba
+  -moz-text-shadow: $horizontal $vertical $blur $rgba
+  -ms-text-shadow: $horizontal $vertical $blur $rgba
+  -o-text-shadow: $horizontal $vertical $blur $rgba
+  text-shadow: $horizontal $vertical $blur $rgba
+
+@mixin border-radius($radius)
+  -webkit-border-radius: $radius
+  -moz-border-radius: $radius
+  -ms-border-radius: $radius
+  -o-border-radius: $radius
+  border-radius: $radius
+
+@mixin transform-origin($origin)
+  -webkit-transform-origin: $origin
+  -moz-transform-origin: $origin
+  -ms-transform-origin: $origin
+  -o-transform-origin: $origin
+  transform-origin: $origin
+
+@mixin perspective($perspective)
+  -webkit-perspective: $perspective
+  -moz-perspective: $perspective
+  -ms-perspective: $perspective
+  -o-perspective: $perspective
+  perspective: $perspective
+
+@mixin preserve3d
+  -webkit-transform-style: preserve-3d
+  -moz-transform-style: preserve-3d
+  -ms-transform-style: preserve-3d
+  -o-transform-style: preserve-3d
+  transform-style: preserve-3d
+
+@mixin backface-vis($val)
+  -webkit-backface-visibility: $val
+  -moz-backface-visibility: $val
+  -ms-backface-visibility: $val
+  -o-backface-visibility: $val
+  backface-visibility: $val
+
+@mixin opacityz($opacity)
+  -webkit-opacity: $opacity
+  -moz-opacity: $opacity
+  -ms-opacity: $opacity
+  -o-opacity: $opacity
+  opacity: $opacity
+
+@mixin middle-align($height)
+  vertical-align: middle
+  line-height: $height
+
+@mixin blurz($blurz)
+  -webkit-filter: blur($blurz)
+  -moz-filter: blur($blurz)
+  -ms-filter: blur($blurz)
+  -o-filter: blur($blurz)
+  filter: blur($blurz)
+
+@mixin highness
+  z-index: 995 !important
+
+@mixin nearly-ontop
+  z-index: 999 !important
+
+@mixin ontop
+  z-index: 1000 !important
+
+@mixin ontop-absolut
+  z-index: 9999 !important
+
+@mixin square($dim)
+  height: $dim
+  width: $dim
+
+@mixin cover
+  position: absolute
+  display: block
+  top: 0
+  left: 0
+  height: 100%
+  width: 100%
+
+@mixin width_height($width, $height)
+  width: $width
+  height: $height
+
+@mixin top_left_right_bottom($top, $left, $right, $bottom)
+  top: $top
+  left: $left
+  right: $right
+  bottom: $bottom
+
+@mixin top_left($top, $left)
+  top: $top
+  left: $left
+
+@mixin top_right($top, $right)
+  top: $top
+  right: $right
+
+@mixin left_right($left, $right)
+  left: $left
+  right: $right
+
+@mixin padding_lr($left,$right)
+  padding-left: $left
+  padding-right: $right
+
+@mixin margin_lr($left,$right)
+  margin-left: $left
+  margin-right: $right
+
+@mixin unstyled-anchor
+  &:link, &:visited, &:active
+    text-decoration: none
+
+@mixin global-link($color)
+  &:link, &:visited, &:hover, &:active
+    color: $color
+
