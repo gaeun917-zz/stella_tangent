@@ -1,16 +1,108 @@
 //screen view
 
-.header
-  .navbar
-    padding: .8em 0
-    .form-inline
-      display: flex
-      flex-flow: row nowrap
-      a
-        display: inline
-        margin-top: 0
-      button
-        margin: 8px 0 8px 30px
+
+
+/*--column --------------------*/
+.mm-6column:after,
+.mm-6column:before,
+.mm-3column:after,
+.mm-3column:before
+  content: ""
+  display: table
+  clear: both
+
+.mm-6column,
+.mm-3column
+  float: left
+  position: relative
+
+.mm-6column
+  width: 50%
+
+.mm-3column
+  width: 25%
+
+.responsive-img
+  display: block
+  max-width: 100%
+
+.left-images
+  margin-right: 25px
+
+.left-images, .left-categories-list
+  float: left
+
+.categories-list li
+  display: block
+  line-height: normal
+  margin: 0
+  padding: 5px 0
+
+.categories-list li :hover
+  background: inherit !important
+
+.left-images > p
+  background: none repeat scroll 0 0 #ff7f50
+  display: block
+  font-size: 18px
+  line-height: normal
+  margin: 0
+  padding: 5px 14px
+
+.categories-list span
+  font-size: 18px
+  padding-bottom: 5px
+  text-transform: uppercase
+
+.mm-view-more
+  background: none repeat scroll 0 0 #ff7f50
+  color: #fff
+  display: inline !important
+  line-height: normal
+  padding: 5px 8px !important
+  margin-top: 10px
+
+.display-on
+  display: block
+  transition-duration: 0.9s
+
+.drop-down > a:after
+  content: "\f103"
+  color: #fff
+  font-family: "Open Sans"
+  font-style: normal
+  margin-left: 5px
+
+
+
+
+/*Animation--*/
+.animated
+  -webkit-animation-duration: 1s
+  animation-duration: 1s
+  -webkit-animation-fill-mode: both
+  animation-fill-mode: both
+
+@-webkit-keyframes fadeIn
+  0%
+    opacity: 0
+  100%
+    opacity: 1
+
+@keyframes fadeIn
+  0%
+    opacity: 0
+  100%
+    opacity: 1
+
+.fadeIn
+  -webkit-animation-name: fadeIn
+  animation-name: fadeIn
+
+// mega drop down ------------------------------------
+
+
+
 
 .main_banner
   .main_div-left
@@ -18,10 +110,10 @@
     transition: all 1s
   .main_div-right
     position: absolute
-    top: 4000px
+    top: 400px
     left: 0
 
-.product
+.bespoke
   padding: 100px 0
   .container
     .row
@@ -50,8 +142,8 @@
 
 
 .testimonial
-  padding: 100px 0
-  .main_div-left
+  //padding: 100px 0
+  //.main_div-left
     //float: left
     //padding-left: 5px
     //margin-top: 60px
@@ -77,10 +169,10 @@
     padding-bottom: 90px
   p
     font-weight: 300
-    margin-right: 40px
+    //margin-right: 40px
     font-size: 1rem
 
-.partners
+.latest
   .container
     padding-top: 80px
     padding-bottom: 120px

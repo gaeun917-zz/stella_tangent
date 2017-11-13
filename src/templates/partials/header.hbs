@@ -1,41 +1,165 @@
 <section class="header">
     <div class="container">
-        <nav class="navbar navbar-toggleable-md navbar-light">
-
-            <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse"
-                    data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
-                    aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-
-            <a class="navbar-brand" href="#">
-                <!--<object data="img/logo/logo_artha_lg.svg" type="image/svg+xml" shape-rendering="crispEdges"></object>-->
-
-                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="198"
-                     height="50" viewBox="0 0 198 50"
-                     shape-rendering="crispEdges">
-                    <image id="artha_logo_lg" width="198" height="50"
-                           xlink:href="data:image/png;base64,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"/>
-                </svg>
-
-            </a>
-            <div class="collapse navbar-collapse justify-content-between" id="navbarSupportedContent">
-                <ul class="header_ul navbar-nav justify-content-center">
-                    <li class="nav-item active">
-                        <a class="nav-link" href="#">About us<span class="sr-only">(current)</span></a></li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">our platform</a></li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">resources</a></li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">impact for breakfast</a></li>
+        <!--mobile-view -->
+        <div class="xs-menu-cont">
+            <a id="menutoggle"><i class="fa fa-align-justify"></i> </a>
+            <nav class="xs-menu displaynone">
+                <ul>
+                    <li class=""><a href="#">WHY US?</a></li>
+                    <li><a href="#">E-COMMERCE</a></li>
+                    <li><a href="#">DIGITAL MARKETING</a></li>
+                    <li><a href="#">SOFTWARE DEVELOPMENT</a></li>
+                    <li><a href="#">OUR WORK</a></li>
+                    <li><a href="#">PARTNERS</a></li>
+                    <li><a href="#">NEWS/BLOG</a></li>
+                    <li><a href="#">CONTACT</a></li>
                 </ul>
-                <div class="form-inline right_button">
-                    <a class="" href="#">LOG IN</a>
-                    <button class="btn btn-circle-red my-2 my-sm-0" type="submit">GET STARTED</button>
-                </div>
-            </div>
+            </nav>
+        </div>
 
+        <nav class="menu">
+            <ul>
+                <li class="active"><img src="img/header_cup.png" alt=""/></li>
+                <li class="drop-down"><a href="#">WHY US?</a>
+                    <!--START: category-->
+                <li class="drop-down"><a href="#">E-COMMERCE</a>
+
+                    <div class="mega-menu fadeIn animated">
+                        <div class="mm-3column">
+                            <span class="categories-list">
+							    <ul>
+							    <span>PLAN</span>
+								    <a href="#"><li>Consulting / Strateg</li></a>
+								    <a href="#"><li>Brand Identity</li></a>
+								    <a href="#"><li>Design & User Experience</li></a>
+							    </ul>
+						    </span>
+                        </div>
+
+                        <div class="mm-3column">
+						    <span class="categories-list">
+						        <ul>
+							    <span>BUILD</span>
+                                    <a href="#"><li>Website Development</li></a>
+                                    <a href="#"><li>Platform Integration</li></a>
+                                    <a href="#"><li>Marketplace</li></a>
+                                    <a href="#"><li>Third Party</li></a>
+                                    <a href="#"><li>Google Analytics</li></a>
+							    </ul>
+						    </span>
+                        </div>
+
+                        <div class="mm-3column">
+                            <span class="categories-list">
+						    <ul>
+							<span>SUPPORT</span>
+							    <a href="#"><li>Consulting / Strategy</li></a>
+							    <a href="#"><li>Managed Hosting</li></a>
+							    <a href="#"><li>Design & User Experience</li></a>
+							    <a href="#"><li>Website Development</li></a>
+						    </ul>
+					        </span>
+                        </div>
+                    </div>
+
+                </li>
+
+                <!--START: category-->
+                <li class="drop-down"><a href="#">DIGITAL MARKETING</a>
+
+                    <div class="mega-menu fadeIn animated">
+                        <div class="mm-3column">
+                            <span class="categories-list">
+							    <ul>
+							    <span>PLAN</span>
+								    <a href="#"><li>Consulting / Strateg</li></a>
+								    <a href="#"><li>Brand Identity</li></a>
+								    <a href="#"><li>Design & User Experience</li></a>
+							    </ul>
+						    </span>
+                        </div>
+
+                        <div class="mm-3column">
+						    <span class="categories-list">
+						        <ul>
+							    <span>BUILD</span>
+                                    <a href="#"><li>Website Development</li></a>
+                                    <a href="#"><li>Platform Integration</li></a>
+                                    <a href="#"><li>Marketplace</li></a>
+                                    <a href="#"><li>Third Party</li></a>
+                                    <a href="#"><li>Google Analytics</li></a>
+							    </ul>
+						    </span>
+                        </div>
+
+                        <div class="mm-3column">
+                            <span class="categories-list">
+						    <ul>
+							<span>SUPPORT</span>
+							    <a href="#"><li>Consulting / Strategy</li></a>
+							    <a href="#"><li>Managed Hosting</li></a>
+							    <a href="#"><li>Design & User Experience</li></a>
+							    <a href="#"><li>Website Development</li></a>
+						    </ul>
+					        </span>
+                        </div>
+                    </div>
+
+                </li>
+
+                <!--START: category-->
+                <li class="drop-down"><a href="#">SOFTWARE DEVELOPMENT</a>
+
+                    <div class="mega-menu fadeIn animated">
+                        <div class="mm-3column">
+                            <span class="categories-list">
+							    <ul>
+							    <span>PLAN</span>
+								    <a href="#"><li>Consulting / Strateg</li></a>
+								    <a href="#"><li>Brand Identity</li></a>
+								    <a href="#"><li>Design & User Experience</li></a>
+							    </ul>
+						    </span>
+                        </div>
+
+                        <div class="mm-3column">
+						    <span class="categories-list">
+						        <ul>
+							    <span>BUILD</span>
+                                    <a href="#"><li>Website Development</li></a>
+                                    <a href="#"><li>Platform Integration</li></a>
+                                    <a href="#"><li>Marketplace</li></a>
+                                    <a href="#"><li>Third Party</li></a>
+                                    <a href="#"><li>Google Analytics</li></a>
+							    </ul>
+						    </span>
+                        </div>
+
+                        <div class="mm-3column">
+                            <span class="categories-list">
+						    <ul>
+							<span>SUPPORT</span>
+							    <a href="#"><li>Consulting / Strategy</li></a>
+							    <a href="#"><li>Managed Hosting</li></a>
+							    <a href="#"><li>Design & User Experience</li></a>
+							    <a href="#"><li>Website Development</li></a>
+						    </ul>
+					        </span>
+                        </div>
+                    </div>
+
+                </li>
+                <!--END: category-->
+
+
+                <li><a href="#">OUR WORK</a></li>
+                <li><a href="#">PARTNERS</a></li>
+                <li><a href="#">NEWS/BLOG</a></li>
+                <li><a href="#">CONTACT</a></li>
+
+                <li style="float:right;"><a href="#"><img src="img/header_cup.png" alt=""/>Fancy a Cuppa?</a></li>
+
+            </ul>
         </nav>
     </div>
 </section>
