@@ -6,25 +6,25 @@
         "title": "Business Understanding",
         "description": "Securing visitors' trust is paramount when selling luxury goods online. We have developed tried and tested methods for accruing credibility.",
         "link": "See for yourself",
-        "img": "./images/top-best.png"
+        "img": "./img/top-business.png"
       },
       {
         "title": "Technical Skills",
         "description": "Securing visitors' trust is paramount when selling luxury goods online. We have developed tried and tested methods for accruing credibility.",
         "link": "Which skills",
-        "img": "./images/top-business.png"
+        "img": "./img/top-tech.png"
       },
       {
         "title": "Best Practice",
         "description": "Securing visitors' trust is paramount when selling luxury goods online. We have developed tried and tested methods for accruing credibility.",
         "link": "Everything else",
-        "img": "./images/top-tech.png"
+        "img": "./img/top-best.png"
       },
       {
         "title": "Track Record",
         "description": "Securing visitors' trust is paramount when selling luxury goods online. We have developed tried and tested methods for accruing credibility.",
         "link": "This is what",
-        "img": "./images/top-track.png"
+        "img": "./img/top-track.png"
       }
     ]
   },

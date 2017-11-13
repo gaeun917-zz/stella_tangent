@@ -36,13 +36,17 @@
   display: block
   line-height: normal
   margin: 0
+  color: #2980b8
+  font-size: 14px
   padding: 5px 0
 
 .categories-list li :hover
-  background: inherit !important
+  color: black
+  border-bottom: 0px
+
 
 .left-images > p
-  background: none repeat scroll 0 0 #ff7f50
+  background: none repeat scroll 0 0
   display: block
   font-size: 18px
   line-height: normal
@@ -105,10 +109,11 @@
 
 
 .main_banner
-  .main_div-left
-    padding-right: 70px
+  .main_div-r
+    padding-right: 300px
+    //padding-left: 85px
     transition: all 1s
-  .main_div-right
+  .main_div-l
     position: absolute
     top: 400px
     left: 0
@@ -117,7 +122,7 @@
   padding: 100px 0
   .container
     .row
-      .main_div-left
+      .main_div-r
         padding: 0
         .card
           max-width: 472px
@@ -129,7 +134,7 @@
           display: flex
         .btn-circle-red
           margin-left: 10px
-      .main_div-right
+      .main_div-l
         padding-left: 100px
         padding-right: 0
         .product_li:after
@@ -139,6 +144,21 @@
   display: none
 #product_list_lower
   display: block
+  padding-left: 100px
+
+
+.magento
+  padding: 60px
+  .news_logo
+    padding-right: 35px
+    padding-left: 35px
+    .col:first-child
+      padding-left: 0
+
+
+
+
+
 
 
 .testimonial
@@ -147,9 +167,10 @@
     //float: left
     //padding-left: 5px
     //margin-top: 60px
-  .main_div-right
+  .main_div-l
     display: block
     float: right
+//    padding: 6% 8% 0 8%
 
 
 .platform_user
@@ -163,21 +184,21 @@
     margin-right: 25px
     margin-left: 25px
 
-.investing
+.top4
   padding: 90px 0
-  .investing_title
+  .top4_title
     padding-bottom: 90px
   p
     font-weight: 300
-    //margin-right: 40px
-    font-size: 1rem
+    padding-bottom: 20px
+    font-size: 14px
 
 .latest
   .container
     padding-top: 80px
     padding-bottom: 120px
     margin: 0 auto
-    .main_div-right
+    .main_div-l
       .container
         .blocks
           display: flex
@@ -193,51 +214,32 @@
       .card
         margin-right: 40px
 
-.metrics
-  padding: 60px 0
-  .background_wrapper
-    padding: 250px 0
-    .impact_card
-      padding: 0
-      margin: 0 auto
-      display: flex
-      align-items: center
-      .card
-        margin-right: 40px
-        width: 300px
-        padding: 20px 0
-        .card-block
-          h1.counter
-            font-size: 3em
-          p.card-text
-            font-size: .9em
+//.metrics
+//  padding: 60px 0
+//  .background_wrapper
+//    padding: 250px 0
+//    .impact_card
+//      padding: 0
+//      margin: 0 auto
+//      display: flex
+//      align-items: center
+//      .card
+//        margin-right: 40px
+//        width: 300px
+//        padding: 20px 0
+//        .card-block
+//          h1.counter
+//            font-size: 3em
+//          p.card-text
+//            font-size: .9em
 
 
-.testimonial
-  .main_div-right
-    padding: 6% 8% 0 8%
 
-.news
-  padding: 80px 0
-  .card_carousel.slick-slider
-    margin: 60px 0
-  .news_logo
-    padding-right: 35px
-    padding-left: 35px
-    .col:first-child
-      padding-left: 0
-  .carousel.slide
-    .carousel-inner
-      .news_title
-        padding: 0 50px
-  .card
-    margin-left: 15px
-    margin-right: 15px
 
 .search
   padding: 45px
   .container
-    .main_div-right
+    .main_div-l
       button
         width: 133px
 

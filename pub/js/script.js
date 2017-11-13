@@ -32,6 +32,9 @@ $(document).ready(function() {
         $('li').removeClass('active');
         $(this).addClass('active');
     });
+
+
+
     //drop down menu
     $(".drop-down").hover(function() {
         $('.mega-menu').addClass('display-on');
@@ -41,6 +44,12 @@ $(document).ready(function() {
     });
 
 });
+
+
+
+
+
+
 
 //platform, news
 $('.card_carousel').slick({
