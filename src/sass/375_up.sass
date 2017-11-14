@@ -35,7 +35,9 @@
         color: white
         text-decoration: none
 
-    .main_div-l::after
+    .square
+      //content: " "
+      display: block
       width: 0
       height: 0
       border-style: solid
@@ -57,6 +59,7 @@
         color: white
 
 .main_banner:after
+  content: " "
   margin: 0 auto
   width: 30px
   height: 30px
@@ -810,7 +813,7 @@ nav.menu
   height: 60px
 
 .menu ul
-  text-align: center
+  //text-align: center
 
 .menu ul .bm_logo_li
   float: left
@@ -824,22 +827,28 @@ nav.menu
 .menu ul li img
   width: 60px
   height: 80px
+  float: left
 .menu ul li #header_cup
   width: 40px
   height: 30px
+  margin: 5px
 
 .menu #cuppa_li
   background-color: #2980b8
+  float: right
+  width: 161px
+  height: 60px
 
 .menu #cuppa_li a
   color: white
+  line-height: 22px
 
 .menu > ul li a,
 .xs-menu li a
   text-decoration: none
   color: black
   display: block
-  padding: 7px 10px
+  padding: 7px 0
 
 .menu > ul li a:hover
   border-bottom: 5px solid #2980b8
@@ -850,6 +859,11 @@ nav.menu
 
 //.active
 //  background: #444 !important
+.mega-menu
+  z-index: 999
+  width: 70%
+  left: 200px
+  text-align: left
 
 .displaynone
   display: none
@@ -881,13 +895,18 @@ nav.menu
 
 .mega-menu
   background: none repeat scroll 0 0 white
-  left: 0
+  //left: 0
   margin-top: 3px
   position: absolute
-  width: 100%
-  padding: 15px
+  //width: 100%
+  padding: 50px
   display: none
   transition-duration: 0.9s
+  z-index: 999
+  width: 70%
+  left: 200px
+
+
   .categories-list
     span
       color: black
