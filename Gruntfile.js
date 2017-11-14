@@ -66,18 +66,6 @@
         html: {
           files: ['src/**/*.hbs'],
           tasks: ['assemble']
-        },
-        data: {
-          files: ['src/data/*.json'],
-          tasks: ['assemble']
-        },
-        fonts: {
-          files: ['src/fonts/**/*.{ttf,eot,svg,woff,woff2}'],
-          tasks: ['copy:fonts']
-        },
-        vendor_js: {
-          files: ['bower_components/**/*.js'],
-          tasks: ['concat:vendor_js']
         }
       },
       cssmin: {
@@ -120,7 +108,7 @@
     grunt.loadNpmTasks('grunt-contrib-watch');
     grunt.registerTask('basic', ['sass', 'concat', 'assemble']);
     grunt.registerTask('default', ['basic', 'watch']);
-    return grunt.registerTask('deploy', ['default', 'uglify', 'imagemin']);
+    return grunt.registerTask('deploy', ['default', 'uglify']);
   };
 
 }).call(this);

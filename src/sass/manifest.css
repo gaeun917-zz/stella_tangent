@@ -5,7 +5,7 @@
 *:after {
   box-sizing: border-box; }
 
-/** * Eric Meyer's Reset CSS v2.0 (https://meyerweb.com/eric/tools/css/reset/) * http://cssreset.com */
+/** * START: Eric Meyer's Reset CSS v2.0 (https://meyerweb.com/eric/tools/css/reset/) * http://cssreset.com */
 html, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, address, big, cite, code, del, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, section, summary, time, mark, audio, video {
   margin: 0;
   padding: 0;
@@ -35,12 +35,14 @@ table {
   border-collapse: collapse;
   border-spacing: 0; }
 
+/** * END: Eric Meyer's Reset CSS v2.0 (https://meyerweb.com/eric/tools/css/reset/) * http://cssreset.com */
 body {
   font-family: "Raleway", sans-serif;
   width: 100%;
   color: #2980b9;
   display: block;
-  word-wrap: break-word; }
+  word-wrap: break-word;
+  overflow-x: hidden; }
 
 section {
   font-size: 0.9rem; }
@@ -63,11 +65,6 @@ a:focus, a:hover, .card.slick-slide {
   color: white;
   outline: 0 !important; }
 
-.platform_features div {
-  font-size: 1rem;
-  margin: 0 auto;
-  font-weight: 400; }
-
 .navbar-light .navbar-toggler {
   border-color: transparent;
   margin-top: 15px; }
@@ -76,7 +73,7 @@ a:focus, a:hover, .card.slick-slide {
   background-color: #2980b9;
   font-weight: 200;
   color: #fff;
-  width: 214px;
+  width: 170px;
   height: 40px;
   font-size: 16px;
   border-radius: 0;
@@ -96,7 +93,7 @@ a:focus, a:hover, .card.slick-slide {
   margin: 0 auto;
   display: block; }
 
-.btn-circle-white:hover {
+.btn-circle-white:hover, .btn-circle-white:focus {
   background-color: white;
   color: #2980b9; }
 
@@ -112,9 +109,9 @@ a:focus, a:hover, .card.slick-slide {
   background: url(../img/icon/arrow_left_lg.svg) no-repeat; }
 
 .card {
-  -webkit-box-shadow: 0px 2px 10px 0px rgba(0, 0, 0, 0.15);
-  -moz-box-shadow: 0px 2px 10px 0px rgba(0, 0, 0, 0.15);
-  box-shadow: 0px 2px 10px 0px rgba(0, 0, 0, 0.15);
+  -webkit-box-shadow: 0px 4px 2px 0px rgba(41, 128, 184, 0.1);
+  -moz-box-shadow: 0px 4px 2px 0px rgba(41, 128, 184, 0.1);
+    -moz-box-shadow-box-shadow: 0px 4px 2px 0px rgba(41, 128, 184, 0.1);
   margin-bottom: 10px;
   margin-right: 25px;
   margin-left: 25px; }
@@ -148,16 +145,6 @@ a:focus, a:hover, .card.slick-slide {
 .bespoke .main_div-right .footer:before {
   margin-right: 10px; }
 
-.bespoke .main_div-r .product_li:before,
-.bespoke .main_div-right .product_li:after {
-  content: " ";
-  background: url(../img/icon/green_arrow.png) no-repeat;
-  background-position: bottom;
-  display: inline-block;
-  width: 15px;
-  height: 15px;
-  margin-right: 4px; }
-
 .bespoke .main_div-right .product_li:after {
   float: right;
   margin-top: 20px;
@@ -169,24 +156,6 @@ a:focus, a:hover, .card.slick-slide {
 .bespoke .slick-dots li.slick-active button:before {
   opacity: 1;
   color: #b11f37; }
-
-.quote:before {
-  content: " “ ";
-  font-family: "Open Sans", sans-serif;
-  color: #b11f37;
-  font-size: 4em;
-  position: absolute;
-  top: -80px;
-  left: -40px;
-  width: 30px;
-  height: 30px; }
-
-.quote:after {
-  content: " ” ";
-  color: #b11f37;
-  font-family: "Open Sans", sans-serif;
-  font-size: 4em;
-  position: absolute; }
 
 .slick-dotted.slick-slider {
   padding: 0 15px;
@@ -299,14 +268,24 @@ a:focus, a:hover, .card.slick-slide {
         top: -240px;
         left: 300px;
         height: 400px;
-        width: 331px; }
+        width: 333px; }
         .main_banner div .main_div-l span {
           font-size: 14px; }
         .main_banner div .main_div-l p {
-          font-size: 40px;
+          font-size: 36px;
+          color: white;
           margin-bottom: 40px;
           margin-top: 10px;
           font-weight: 200; }
+        .main_banner div .main_div-l a {
+          color: white;
+          text-decoration: none; }
+      .main_banner div .main_div-l::after {
+        width: 0;
+        height: 0;
+        border-style: solid;
+        border-width: 110px 333px 0 0;
+        border-color: #2980b9 transparent transparent transparent; }
       .main_banner div .main_div-r {
         color: #fff;
         text-align: right; }
@@ -318,7 +297,14 @@ a:focus, a:hover, .card.slick-slide {
         .main_banner div .main_div-r p {
           font-weight: 300;
           font-size: 16px;
-          padding: 40px 0; }
+          padding: 20px 0;
+          color: white; }
+
+  .main_banner:after {
+    margin: 0 auto;
+    width: 30px;
+    height: 30px;
+    background-color: green; }
 
   .top4 {
     padding-top: 40px;
@@ -352,19 +338,19 @@ a:focus, a:hover, .card.slick-slide {
           transition: all 1s ease;
           transform: scale(1.1); }
         .top4 .top4_card .card-block img.top-business {
-          width: 70px;
+          width: 80px;
           height: 90px;
-          margin: 20px auto; }
+          margin: 10px auto; }
         .top4 .top4_card .card-block img.top-tech {
-          width: 74px;
-          height: 74px;
+          width: 70px;
+          height: 70px;
           margin: 20px auto; }
         .top4 .top4_card .card-block img.top-track {
           width: 80px;
           height: 80px;
           margin: 20px auto; }
         .top4 .top4_card .card-block img.top-best {
-          margin: 20px auto; }
+          margin: 10px auto; }
         .top4 .top4_card .card-block h5 {
           padding: 20px 0;
           font-weight: 200;
@@ -392,11 +378,14 @@ a:focus, a:hover, .card.slick-slide {
             background-color: #2980b9;
             color: white;
             padding: 20px 0;
-            font-weight: 300; }
+            font-weight: 300;
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px; }
           .bespoke .main_div-l .card .card-block .price {
             margin-top: 53px; }
             .bespoke .main_div-l .card .card-block .price .pound {
-              font-size: 40px; }
+              font-size: 40px;
+              vertical-align: top; }
             .bespoke .main_div-l .card .card-block .price .bill {
               font-size: 12px;
               color: black;
@@ -406,17 +395,18 @@ a:focus, a:hover, .card.slick-slide {
           .bespoke .main_div-l .card .card-block .product_card_ul {
             list-style: none;
             font-size: 15px;
-            margin-bottom: 2rem;
             line-height: 40px;
             color: black;
             padding: 15px 55px; }
             .bespoke .main_div-l .card .card-block .product_card_ul li.product_li {
-              border-bottom: 1px solid #2980b9; }
+              border-bottom: 1px solid rgba(41, 128, 184, 0.25); }
               .bespoke .main_div-l .card .card-block .product_card_ul li.product_li #bespoke_badge {
                 background-color: #ff3333;
                 font-weight: 400;
                 padding-top: 5px;
                 padding-bottom: 5px; }
+          .bespoke .main_div-l .card .card-block #findout {
+            margin-bottom: 25px !important; }
       .bespoke .main_div-l .card_blue_ribbon {
         background-color: #e9f2f8;
         color: #2980b9;
@@ -424,7 +414,7 @@ a:focus, a:hover, .card.slick-slide {
         border-top: 1px solid #2980b9;
         font-size: 1em;
         font-weight: 400;
-        padding: 20px 78px;
+        padding: 10px 78px;
         line-height: 30px; }
       .bespoke .main_div-l .launch_per_month {
         padding: 30px; }
@@ -488,91 +478,66 @@ a:focus, a:hover, .card.slick-slide {
           height: 120px; }
 
   .testimonial {
-    padding: 60px 0 0 0;
+    padding: 40px 0 0 0;
     overflow-x: hidden;
     color: #2980b9;
     background: #e9f2f8 no-repeat; }
+    .testimonial .feature_carousel {
+      margin: 0 100px; }
+      .testimonial .feature_carousel .row.align-items-center {
+        padding: 0px 100px; }
     .testimonial .main_div-r {
       font-weight: 300 !important;
       margin-top: 50px; }
-      .testimonial .main_div-r > span {
-        color: black; }
+      .testimonial .main_div-r .name {
+        color: black;
+        font-size: 18px; }
       .testimonial .main_div-r .title {
         padding: 30px 0;
         margin-bottom: 0;
-        font-weight: 600; }
+        font-weight: 300;
+        font-size: 28px; }
       .testimonial .main_div-r .body {
         font-weight: 300;
         margin-bottom: 30px;
-        font-size: 1rem;
+        font-size: 15px;
         color: black; }
       .testimonial .main_div-r .footer.try {
         padding: 1.5rem 0;
         font-size: 1rem;
-        font-weight: 400 !important;
+        font-weight: 300;
         color: #2980b9;
         text-decoration: none;
         background-color: transparent; }
+      .testimonial .main_div-r span.testimonial_seperator {
+        color: black;
+        margin: 0 15px; }
       .testimonial .main_div-r .play {
         width: 30px;
         height: 30px;
         display: inline-block;
-        margin-left: 5px; }
+        margin-left: 5px;
+        position: relative;
+        transform: translateY(35%);
+        top: 50%; }
     .testimonial .main_div-l {
       display: none; }
       .testimonial .main_div-l img {
-        max-width: 450px; }
-
-  .platform_user {
-    background-color: #f6f7f9;
-    padding-top: 40px;
-    padding-bottom: 40px;
-    overflow-x: hidden; }
-    .platform_user .container .title {
-      font-weight: 700;
-      font-size: 2.3rem; }
-    .platform_user .container .subtitle {
-      margin-bottom: 40px; }
-    .platform_user .card a {
-      text-decoration: none; }
-    .platform_user .card p.card-text {
-      background-color: #3399ff;
-      color: white;
-      padding: 0.7rem 0;
-      font-weight: 400;
-      margin-bottom: 0; }
-    .platform_user .card .card-block {
-      width: 300px;
-      margin: 0 auto;
-      height: 100px;
-      display: flex;
-      align-items: center;
-      padding: 1.4rem; }
-    .platform_user .card.slick-slide {
-      overflow: hidden;
-      margin-left: 5px;
-      margin-right: 5px; }
-      .platform_user .card.slick-slide img {
-        width: 70%;
-        height: auto;
-        margin: 0 auto;
-        overflow: hidden; }
+        max-width: 480px; }
 
   .latest {
-    overflow-x: hidden;
-    background: #2980b9 url(../img/bg/logo_background_red.png) no-repeat 700px 700px; }
+    background: #2980b9; }
+    .latest .slick-list.draggable {
+      max-width: 100vw; }
     .latest .title {
       color: #fff;
-      padding: 0 15px;
-      margin: 0 auto; }
-      .latest .title h2 {
-        padding: 20px 0;
-        font-weight: 600; }
+      margin: 65px auto; }
       .latest .title div {
-        font-weight: 300;
-        margin-bottom: 1.5rem;
+        font-weight: 200;
+        margin-top: 20px;
         font-size: 1rem; }
     .latest .main_div-right .container {
+      width: 100vw;
       padding: 0; }
       .latest .main_div-right .container .blocks .block__body {
         top: 100%;
@@ -608,11 +573,7 @@ a:focus, a:hover, .card.slick-slide {
           max-width: 200px;
           padding: 5em 1em 1em 1em;
           opacity: 1; }
-
-  .latest .container {
-    margin-top: 40px;
-    margin-bottom: 40px; }
-    .latest .container .slick-dotted.slick-slider {
+    .latest .slick-dotted.slick-slider {
       padding: 0;
       margin-bottom: 80px; }
 
@@ -644,7 +605,30 @@ a:focus, a:hover, .card.slick-slide {
       font-size: 15px; }
     .news .card_carousel .read_more {
       margin-bottom: 20px;
-      margin-top: 50px; }
+      margin-top: 50px;
+      text-transform: uppercase;
+      text-decoration: none;
+      padding-top: 5px; }
+    .news .card_carousel .read_more:hover {
+      color: #2980b9; }
+
+  #arrow-blue {
+    content: ">";
+    background-color: #2980b9;
+    color: white;
+    padding-left: 5px;
+    margin-left: 10px;
+    padding-bottom: 10px;
+    font-size: 10px;
+    width: 15px;
+    height: 15px;
+    line-height: 14px;
+    display: inline-block;
+    font-weight: 200;
+    border-radius: 50%;
+    position: relative;
+    transform: translateY(-15%);
+    top: 50%; }
 
   .contact {
     background-color: #2980b9;
@@ -662,10 +646,20 @@ a:focus, a:hover, .card.slick-slide {
       margin-top: 15px;
       margin-bottom: 15px; }
     .contact .footer_row-link .meeting, .contact .footer_row-link .call {
-      margin-right: 75px; }
-    .contact .footer_row-link .call a {
+      margin-right: 40px; }
+    .contact .footer_row-link .meeting a {
+      width: 130px; }
+    .contact .footer_row-link .call div {
       font-size: 29px;
-      font-weight: 300; }
+      font-weight: 200; }
+
+  #seperator {
+    display: block;
+    background: url(../img/seperator.png) no-repeat 0 center;
+    height: inherit;
+    line-height: 48px;
+    width: 3px;
+    padding-right: 30px; }
 
   .footer {
     font-size: 0.8rem;
@@ -692,9 +686,9 @@ a:focus, a:hover, .card.slick-slide {
         margin-right: 100px; }
       .footer .footer_row-link span {
         font-size: 25px;
-        font-weight: 300; }
+        font-weight: 200; }
       .footer .footer_row-link a {
-        margin-bottom: 10px;
+        margin-bottom: 9px;
         display: block;
         padding: 0;
         color: white;
@@ -705,14 +699,16 @@ a:focus, a:hover, .card.slick-slide {
         margin-top: 40px; }
       .footer .footer_row-link li {
         list-style: none;
-        font-weight: 300;
+        font-weight: 200;
         font-size: 15px; }
       .footer .footer_row-link .fourth_col {
         color: white;
         font-size: 25px;
         font-weight: 200; }
         .footer .footer_row-link .fourth_col li.copyright {
-          margin-top: 40px; }
+          margin-top: 40px;
+          color: #2980b9;
+          font-size: 12px; }
     .footer .footer_row-copyright {
       margin-top: 30px; }
       .footer .footer_row-copyright span a {
@@ -720,9 +716,24 @@ a:focus, a:hover, .card.slick-slide {
         color: black; }
     .footer .footer_row-social {
       margin-top: 2rem; }
-      .footer .footer_row-social img:nth-child(1) {
-        margin-right: 1rem;
-        max-width: 145px; }
+      .footer .footer_row-social a {
+        display: inline-block;
+        height: fit-content; }
+      .footer .footer_row-social img {
+        margin-right: 50px; }
+      .footer .footer_row-social img#rock {
+        height: 40px; }
+      .footer .footer_row-social img#ad {
+        height: 30px; }
+      .footer .footer_row-social img#sage {
+        height: 24px; }
+      .footer .footer_row-social img#amazone {
+        width: 100px;
+        height: 30px; }
+      .footer .footer_row-social img#paypal {
+        height: 29px; }
+      .footer .footer_row-social img#ogone {
+        height: 25px; }
 
   #conference-timeline {
     position: relative;
@@ -747,12 +758,11 @@ a:focus, a:hover, .card.slick-slide {
 
   #conference-timeline .conference-center-line {
     position: absolute;
-    width: 3px;
-    height: 100%;
-    top: 0;
-    left: 50%;
+    height: 67.7%;
+    top: 290px;
+    left: 50.5%;
     margin-left: -2px;
-    background: #00b0bd;
+    border: 0.5px dotted black;
     z-index: -1; }
 
   #conference-timeline .conference-timeline-content {
@@ -783,19 +793,26 @@ a:focus, a:hover, .card.slick-slide {
   .timeline-article .content-right {
     position: relative;
     width: auto;
-    border: 1px solid #ddd;
     background-color: #fff;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.03);
-    padding: 27px 25px; }
+    padding: 27px 60px; }
+
+  .timeline-article .content-left {
+    text-align: -webkit-right;
+    text-align: right; }
+
+  .timeline-article .content-right {
+    text-align: -webkit-left;
+    text-align: left; }
 
   .timeline-article p {
-    margin: 0 0 0 60px;
     padding: 0;
     font-weight: 400;
     color: #242424;
     font-size: 14px;
     line-height: 24px;
-    position: relative; }
+    position: relative;
+    margin-top: 20px;
+    margin-bottom: 20px; }
 
   .timeline-article p span.article-number {
     position: absolute;
@@ -829,14 +846,37 @@ a:focus, a:hover, .card.slick-slide {
 
   .timeline-article .meta-date {
     position: absolute;
-    top: 0;
-    left: 50%;
-    width: 62px;
-    height: 62px;
+    top: 190px;
+    left: 51%;
+    width: 50px;
+    height: 50px;
     margin-left: -31px;
-    color: #fff;
-    border-radius: 100%;
-    background: #00b0bd; }
+    border-radius: 100%; }
+
+  .meta-date.img1 {
+    top: 0;
+    background: url(../img/service-brain.png) no-repeat 0 center;
+    background-size: 50px; }
+
+  .meta-date.img2 {
+    top: 250px;
+    background: url(../img/service-pen.png) no-repeat 0 center;
+    background-size: 50px; }
+
+  .meta-date.img3 {
+    top: 150px;
+    background: url(../img/service-link.png) no-repeat 0 center;
+    background-size: 50px; }
+
+  .meta-date.img4 {
+    top: 30px;
+    background: url(../img/service-rocket.png) no-repeat 0 center;
+    background-size: 50px; }
+
+  .meta-date.img5 {
+    top: 260px;
+    background: url(../img/service-screen.png) no-repeat 0 center;
+    background-size: 50px; }
 
   .timeline-article .meta-date .date,
   .timeline-article .meta-date .month {
@@ -852,9 +892,18 @@ a:focus, a:hover, .card.slick-slide {
     font-size: 18px;
     line-height: 10px; }
 
+  .service-bottom {
+    text-decoration: none !important; }
+
+  .service-bottom:hover {
+    color: #2980b9; }
+
+  .meta-date.img1 {
+    top: 0px; }
+
   /*===== // Vetical Timeline ===== */
-  /*===== Resonsive Vertical Timeline ===== */
-  /* END: NAV */
+  /*===== MOBILE Resonsive Vertical Timeline ===== */
+  /* START: NAV */
   .container:after,
   .container:before {
     content: "";
@@ -864,7 +913,7 @@ a:focus, a:hover, .card.slick-slide {
     background: white;
     position: relative;
     min-height: 45px;
-    height: 65px; }
+    height: 60px; }
 
   .menu ul {
     text-align: center; }
@@ -1075,7 +1124,8 @@ a:focus, a:hover, .card.slick-slide {
         margin-left: 10px; }
     .bespoke .container .row .main_div-l {
       padding-left: 100px;
-      padding-right: 0; }
+      padding-right: 0;
+      max-width: 578px; }
       .bespoke .container .row .main_div-l .product_li:after {
         margin-left: 0; }
 
@@ -1111,7 +1161,7 @@ a:focus, a:hover, .card.slick-slide {
   .top4 {
     padding: 90px 0; }
     .top4 .top4_title {
-      padding-bottom: 90px; }
+      padding-bottom: 40px; }
     .top4 p {
       font-weight: 300;
       padding-bottom: 20px;

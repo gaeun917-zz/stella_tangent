@@ -85,16 +85,16 @@ module.exports = (grunt) ->
       html:
         files: ['src/**/*.hbs']
         tasks: ['assemble']
-      data:
-        files: ['src/data/*.json']
-        tasks: ['assemble']
-
-      fonts:
-        files: ['src/fonts/**/*.{ttf,eot,svg,woff,woff2}']
-        tasks: ['copy:fonts']
-      vendor_js:
-        files: ['bower_components/**/*.js']
-        tasks: ['concat:vendor_js']
+#      data:
+#        files: ['src/data/*.json']
+#        tasks: ['assemble']
+#
+#      fonts:
+#        files: ['src/fonts/**/*.{ttf,eot,svg,woff,woff2}']
+#        tasks: ['copy:fonts']
+#      vendor_js:
+#        files: ['bower_components/**/*.js']
+#        tasks: ['concat:vendor_js']
 
     # Deploy specific tasks
     cssmin:
@@ -133,5 +133,5 @@ module.exports = (grunt) ->
   grunt.registerTask 'default', ['basic', 'watch']
 
   # Delpoy task(s).
-  grunt.registerTask 'deploy',  ['default', 'uglify', 'imagemin']
+  grunt.registerTask 'deploy',  ['default', 'uglify']
 

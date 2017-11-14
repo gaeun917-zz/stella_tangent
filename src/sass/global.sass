@@ -4,7 +4,7 @@
 *:after
   box-sizing: border-box
 
-/** * Eric Meyer's Reset CSS v2.0 (https://meyerweb.com/eric/tools/css/reset/) * http://cssreset.com */
+/** * START: Eric Meyer's Reset CSS v2.0 (https://meyerweb.com/eric/tools/css/reset/) * http://cssreset.com */
 html, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, address, big, cite, code, del, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, section, summary, time, mark, audio, video
   margin: 0
   padding: 0
@@ -33,6 +33,10 @@ q:after
 table
   border-collapse: collapse
   border-spacing: 0
+/** * END: Eric Meyer's Reset CSS v2.0 (https://meyerweb.com/eric/tools/css/reset/) * http://cssreset.com */
+
+
+
 
 body
   font-family: 'Raleway', sans-serif
@@ -40,6 +44,7 @@ body
   color: #2980b9
   display: block
   word-wrap: break-word
+  overflow-x: hidden
 
 section
   font-size: .9rem
@@ -66,11 +71,11 @@ a:focus, a:hover, .card.slick-slide
 
 //.img-fluid
 //  min-width: 100%
-
-.platform_features div
-  font-size: 1rem
-  margin: 0 auto
-  font-weight: 400
+//
+//.platform_features div
+//  font-size: 1rem
+//  margin: 0 auto
+//  font-weight: 400
 
 // burger menu
 .navbar-light .navbar-toggler
@@ -82,7 +87,7 @@ a:focus, a:hover, .card.slick-slide
   background-color: #2980b9
   font-weight: 200
   color: #fff
-  width: 214px
+  width: 170px
   height: 40px
   font-size: 16px
   border-radius: 0
@@ -103,36 +108,13 @@ a:focus, a:hover, .card.slick-slide
   margin: 0 auto
   display: block
 
-.btn-circle-white:hover
+.btn-circle-white:hover, .btn-circle-white:focus
   background-color: white
   color: #2980b9
 
 .btn-circle-blue:hover
   color: #fff
 
-//.btn-circle-white
-//  background-color: #fff
-//  font-weight: 600
-//  font-size: .8rem
-//  color: #3399ff
-//  width: 214px
-//  height: 40px
-//  padding: 6px 19px
-//  border-radius: 50px
-//  cursor: pointer
-//  line-height: 0
-
-//.btn-circle-white_txtRed
-//  background-color: #fff
-//  font-weight: 600
-//  font-size: .8rem
-//  color: rgb(177, 31, 55)
-//  width: 214px
-//  height: 40px
-//  padding: 6px 19px
-//  border-radius: 50px
-//  cursor: pointer
-//  line-height: 0
 
 .small_arrow_left
   position: absolute
@@ -143,9 +125,9 @@ a:focus, a:hover, .card.slick-slide
   background: url(../img/icon/arrow_left_lg.svg) no-repeat
 
 .card
-  -webkit-box-shadow: 0px 2px 10px 0px rgba(0,0,0,.15)
-  -moz-box-shadow: 0px 2px 10px 0px rgba(0,0,0,.15)
-  box-shadow: 0px 2px 10px 0px rgba(0,0,0,.15)
+  -webkit-box-shadow: 0px 4px 2px 0px rgba(41, 128, 184, 0.1)
+  -moz-box-shadow: 0px 4px 2px 0px rgba(41, 128, 184, 0.1)
+    box-shadow: 0px 4px 2px 0px rgba(41, 128, 184, 0.1)
   margin-bottom: 10px
   margin-right: 25px
   margin-left: 25px
@@ -198,16 +180,16 @@ a:focus, a:hover, .card.slick-slide
     .footer:before
       margin-right: 10px
 
-//green check mark
-.bespoke .main_div-r .product_li:before,
-.bespoke .main_div-right .product_li:after
-  content: " "
-  background:  url(../img/icon/green_arrow.png) no-repeat
-  background-position: bottom
-  display: inline-block
-  width: 15px
-  height: 15px
-  margin-right: 4px
+////green check mark
+//.bespoke .main_div-r .product_li:before,
+//.bespoke .main_div-right .product_li:after
+//  content: " "
+//  background:  url(../img/icon/green_arrow.png) no-repeat
+//  background-position: bottom
+//  display: inline-block
+//  width: 15px
+//  height: 15px
+//  margin-right: 4px
 
 .bespoke
   .main_div-right
@@ -218,7 +200,6 @@ a:focus, a:hover, .card.slick-slide
 
 .bespoke
   .slick-dots
-    //width: 93%
     li
       button:before
         color: rgb(177, 31, 55)
@@ -229,30 +210,28 @@ a:focus, a:hover, .card.slick-slide
         color: rgb(177, 31, 55)
 
 // quote
-.quote:before
-  content: " “ "
-  font-family: 'Open Sans', sans-serif
-  color: #b11f37
-  font-size: 4em
-  position: absolute
-  top: -80px
-  left: -40px
-  width: 30px
-  height: 30px
-
-.quote:after
-  content: " ” "
-  color: rgb(177, 31, 55)
-  font-family: 'Open Sans', sans-serif
-  font-size: 4em
-  position: absolute
+//.quote:before
+//  content: " “ "
+//  font-family: 'Open Sans', sans-serif
+//  color: #b11f37
+//  font-size: 4em
+//  position: absolute
+//  top: -80px
+//  left: -40px
+//  width: 30px
+//  height: 30px
+//
+//.quote:after
+//  content: " ” "
+//  color: rgb(177, 31, 55)
+//  font-family: 'Open Sans', sans-serif
+//  font-size: 4em
+//  position: absolute
 
 // slicker margin
 .slick-dotted.slick-slider
   padding: 0 15px
   margin-bottom: 40px
-
-
 
 // slicker arrow
 .testimonial
@@ -310,7 +289,7 @@ a:focus, a:hover, .card.slick-slide
   text-align: center
   z-index: 999
 
-// dot indicator
+// START: dot indicator
 .slick-dots
   display: block
   position: static
@@ -363,7 +342,7 @@ a:focus, a:hover, .card.slick-slide
         opacity: 1
         color: rgb(177, 31, 55)
 
-
+// END: dot indicator
 
 
 .card_carousel.slick-slider
