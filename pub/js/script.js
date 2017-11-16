@@ -20,38 +20,134 @@
 
 // dropdown
 
-$(document).ready(function() {
-    //responsive menu toggle
-    $("#menutoggle").click(function() {
-        $('.xs-menu').toggleClass('displaynone');
+$(document).ready(function () {
 
+    // HEADER--------------------------------------------------------------------
+    // responsive menu toggle
+    $("#menutoggle").click(function () {
+        $('.xs-menu').toggleClass('displaynone');
     });
     //add active class on menu
-    $('ul li').click(function(e) {
+    $('ul li').click(function (e) {
         e.preventDefault();
         $('li').removeClass('active');
         $(this).addClass('active');
     });
 
-
-
     //drop down menu
-    $(".drop-down").hover(function() {
-        $('.mega-menu').addClass('display-on');
+    $(".drop-down.ecommerce").click(function () {
+        if($(".mega-menu.digital").hasClass("display-on")){
+            $(".mega-menu.digital").removeClass("display-on"); // megamenu
+            $('.header_arrow.digital').removeClass("display-on"); //toggle button
+        }
+        if($(".mega-menu.soft").hasClass("display-on")){
+            $(".mega-menu.soft").removeClass("display-on");
+            $('.header_arrow.soft').removeClass("display-on");
+        }
+       $('.mega-menu.ecommerce').toggleClass("display-on");
+        $('.header_arrow.ecommerce').toggleClass("display-on");
     });
-    $(".drop-down").mouseleave(function() {
-        $('.mega-menu').removeClass('display-on');
+
+
+    $(".drop-down.digital").click(function () {
+        if($(".mega-menu.ecommerce").hasClass("display-on")){
+            $(".mega-menu.ecommerce").removeClass("display-on");
+            $('.header_arrow.ecommerce').removeClass("display-on");
+        }
+        if($(".mega-menu.soft").hasClass("display-on")){
+            $(".mega-menu.soft").removeClass("display-on");
+            $('.header_arrow.soft').removeClass("display-on");
+        }
+        $('.mega-menu.digital').toggleClass("display-on") ;
+        $('.header_arrow.digital').toggleClass("display-on");
+
     });
+
+    $(".drop-down.soft").click(function () {
+        if($(".mega-menu.ecommerce").hasClass("display-on")){
+            $(".mega-menu.ecommerce").removeClass("display-on");
+            $('.header_arrow.ecommerce').removeClass("display-on");
+        }
+        if($(".mega-menu.digital").hasClass("display-on")){
+            $(".mega-menu.digital").removeClass("display-on");
+            $('.header_arrow.digital').removeClass("display-on");
+        }
+        $('.mega-menu.soft').toggleClass('display-on');
+        $('.header_arrow.soft').toggleClass("display-on");
+    });
+
+    //FRONT -----------------------------------------------------------------------
+    // scroll down button
+    $(function () {
+        $('a.go_down[href*=#]').on('click', function (e) {
+            e.preventDefault();
+            $('html, body').animate({scrollTop: $($(this).attr('href')).offset().top}, 500, 'linear');
+        });
+    });
+
+
+    // BESPOKE ---------------------------------------------------------------------
+    // tab control
+    var $swipeTabsContainer = $('.swipe-tabs'),
+        $swipeTabs = $('.swipe-tab'),
+        $swipeTabsContentContainer = $('.swipe-tabs-container'),
+        currentIndex = 0,
+        activeTabClassName = 'active-tab';
+
+    $swipeTabsContainer.on('init', function(event, slick) {
+        $swipeTabsContentContainer.removeClass('invisible');
+        $swipeTabsContainer.removeClass('invisible');
+
+        currentIndex = slick.getCurrent();
+        $swipeTabs.removeClass(activeTabClassName);
+        $('.swipe-tab[data-slick-index=' + currentIndex + ']').addClass(activeTabClassName);
+    });
+
+    $swipeTabsContainer.slick({
+        //slidesToShow: 3.25,
+        slidesToShow: 3,
+        slidesToScroll: 1,
+        arrows: false,
+        infinite: false,
+        swipeToSlide: true,
+        touchThreshold: 10
+    });
+
+    $swipeTabsContentContainer.slick({
+        asNavFor: $swipeTabsContainer,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        arrows: true,
+        infinite: false,
+        swipeToSlide: true,
+        draggable: false,
+        touchThreshold: 10
+    });
+
+
+    $swipeTabs.on('click', function(event) {
+        // gets index of clicked tab
+        currentIndex = $(this).data('slick-index');
+        $swipeTabs.removeClass(activeTabClassName);
+        $('.swipe-tab[data-slick-index=' + currentIndex +']').addClass(activeTabClassName);
+        $swipeTabsContainer.slick('slickGoTo', currentIndex);
+        $swipeTabsContentContainer.slick('slickGoTo', currentIndex);
+    });
+
+    //initializes slick navigation tabs swipe handler
+    $swipeTabsContentContainer.on('swipe', function(event, slick, direction) {
+        currentIndex = $(this).slick('slickCurrentSlide');
+        $swipeTabs.removeClass(activeTabClassName);
+        $('.swipe-tab[data-slick-index=' + currentIndex + ']').addClass(activeTabClassName);
+    });
+
+
 
 });
 
 
-
-
-
-
-
-//platform, news
+// Carousel //------------------------------------------------------------------------
+// platform, news
 $('.card_carousel').slick({
     dots: false,
     infinite: true,
@@ -64,7 +160,7 @@ $('.card_carousel').slick({
             breakpoint: 1024,
             settings: {
                 dots: true,
-                arrows:false,
+                arrows: false,
                 slidesToShow: 2,
                 slidesToScroll: 1
             }
@@ -73,7 +169,7 @@ $('.card_carousel').slick({
             breakpoint: 800,
             settings: {
                 dots: true,
-                arrows:false,
+                arrows: false,
                 slidesToShow: 1,
                 slidesToScroll: 1
             }
@@ -82,7 +178,7 @@ $('.card_carousel').slick({
             breakpoint: 480,
             settings: {
                 dots: true,
-                arrows:false,
+                arrows: false,
                 slidesToShow: 1,
                 slidesToScroll: 1
             }
@@ -93,7 +189,7 @@ $('.card_carousel').slick({
 // impact, investing
 $('.impact_carousel').slick({
     dots: false,
-    arrows:false,
+    arrows: false,
     infinite: true,
     cssEase: 'linear',
     speed: 300,
@@ -104,7 +200,7 @@ $('.impact_carousel').slick({
             breakpoint: 1024,
             settings: {
                 dots: true,
-                arrows:false,
+                arrows: false,
                 slidesToShow: 2,
                 slidesToScroll: 1
             }
@@ -113,7 +209,7 @@ $('.impact_carousel').slick({
             breakpoint: 800,
             settings: {
                 dots: true,
-                arrows:false,
+                arrows: false,
                 slidesToShow: 1,
                 slidesToScroll: 1
             }
@@ -122,7 +218,7 @@ $('.impact_carousel').slick({
             breakpoint: 480,
             settings: {
                 dots: true,
-                arrows:false,
+                arrows: false,
                 slidesToShow: 1,
                 slidesToScroll: 1
             }
@@ -134,7 +230,7 @@ $('.impact_carousel').slick({
 // product, partners
 $('.product_carousel').slick({
     dots: false,
-    arrows:false,
+    arrows: false,
     cssEase: 'linear',
     speed: 300,
     slidesToShow: 4,
@@ -144,7 +240,7 @@ $('.product_carousel').slick({
             settings: {
                 infinite: false,
                 dots: true,
-                arrows:false,
+                arrows: false,
                 slidesToShow: 1,
                 slidesToScroll: 1
             }
@@ -153,7 +249,7 @@ $('.product_carousel').slick({
             breakpoint: 800,
             settings: {
                 dots: true,
-                arrows:false,
+                arrows: false,
                 slidesToShow: 1,
                 slidesToScroll: 1
             }
@@ -162,7 +258,7 @@ $('.product_carousel').slick({
             breakpoint: 480,
             settings: {
                 dots: true,
-                arrows:false,
+                arrows: false,
                 slidesToShow: 1,
                 slidesToScroll: 1
             }
@@ -173,7 +269,7 @@ $('.product_carousel').slick({
 // platform_fearues
 $('.feature_carousel').slick({
     dots: false,
-    arrows:true,
+    arrows: true,
     infinite: true,
     cssEase: 'linear',
     speed: 300,
@@ -184,7 +280,7 @@ $('.feature_carousel').slick({
             breakpoint: 1024,
             settings: {
                 dots: true,
-                arrows:false,
+                arrows: false,
                 slidesToShow: 1,
                 slidesToScroll: 1
             }
@@ -193,7 +289,7 @@ $('.feature_carousel').slick({
             breakpoint: 800,
             settings: {
                 dots: true,
-                arrows:false,
+                arrows: false,
                 slidesToShow: 1,
                 slidesToScroll: 1
             }
@@ -202,7 +298,7 @@ $('.feature_carousel').slick({
             breakpoint: 480,
             settings: {
                 dots: true,
-                arrows:false,
+                arrows: false,
                 slidesToShow: 1,
                 slidesToScroll: 1
             }

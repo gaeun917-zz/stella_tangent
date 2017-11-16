@@ -1,8 +1,11 @@
+*:focus
+  outline: 0
 
 .header
-  font-family: "Raleway", sans-serif
-
-
+  position: absolute
+  width: 100vw
+  background: rgba(255,255,255,.8)
+  height: 60px
 
 .main_banner
   background: linear-gradient(rgba(41, 128, 184, 0.25), rgba(41, 128, 184, 0.25)), url(../img/main-bg.png) no-repeat
@@ -14,7 +17,7 @@
     display: inline-block
     width: 100%
     color: white
-    padding: 40px
+    margin-top: 50px
 
     .main_div-l
       position: relative
@@ -23,20 +26,27 @@
       left: 300px
       height: 400px
       width: 333px
+      padding: 0
       span
         font-size: 14px
+        margin-left: 40px
+        margin-right: 40px
       p
         font-size: 36px
         color: white
         margin-bottom: 40px
         margin-top: 10px
-        font-weight: 200
+        margin-left: 40px
+        margin-right: 40px
+        font-weight: 100
       a
         color: white
         text-decoration: none
-
+        margin-left: 40px
+        margin-right: 40px
+        font-weight: 200
     .square
-      //content: " "
+      margin-top: 40px
       display: block
       width: 0
       height: 0
@@ -58,12 +68,20 @@
         padding: 20px 0
         color: white
 
-.main_banner:after
-  content: " "
-  margin: 0 auto
-  width: 30px
-  height: 30px
-  background-color: green
+  .go_down
+    margin: 0 auto
+    width: 50px
+    height: 50px
+    display: block
+    position: relative
+    transform: translateY(50%)
+    transition: top .5s ease
+
+
+
+
+
+
 
 .top4
   padding-top: 40px
@@ -84,12 +102,11 @@
       margin: 0
       padding: 0
       .img_box
-        width: 100px
-        height: 100px
+        width: 80px
+        height: 80px
         margin: 0 auto
-      img
-        width: 90px
-        height: 90px
+        display: flex
+        justify-content: center
       img:hover
         -moz-transition: all 1s ease
         -webkit-transition: all 1s ease
@@ -97,31 +114,31 @@
         transition: all 1s ease
         transform: scale(1.1)
       img.top-business
-        width: 80px
-        height: 90px
-        margin: 10px auto
+        width: 65px
+        height: 80px
+        //margin: 10px auto
       img.top-tech
-        width: 70px
-        height: 70px
-        margin: 20px auto
+        width: 80px
+        height: 80px
+        //margin: 20px auto
       img.top-track
         width: 80px
         height: 80px
-        margin: 20px auto
+        //margin: 20px auto
       img.top-best
-        margin: 10px auto
+        width: 80px
+        height: 80px
       h5
         padding: 20px 0
         font-weight: 200
         font-size: 21px
 
-//.mask
-//  background-color: #2980b9
-//  opacity: .5
+$swipe-tab-color: #757575
+$swipe-active-tab-color: #000
 
 .bespoke
   background-color: #e9f2f8
-  padding: 40px 0
+  //padding: 40px 0
   overflow-x: hidden
 
   .main_div-l
@@ -130,6 +147,9 @@
       border-radius: 10px
       margin-right: 0
       margin-left: 0
+      -webkit-box-shadow: 5px 5px 16px 2px rgba(41, 128, 184, 0.2)
+      -moz-box-shadow: 5px 5px 16px 2px rgba(41, 128, 184, 0.2)
+      box-shadow: 5px 5px 16px 2px rgba(41, 128, 184, 0.2)
       .card-block
         font-weight: 300
         text-align: center
@@ -142,11 +162,11 @@
           background-color: #2980b9
           color: white
           padding: 20px 0
-          font-weight: 300
+          font-weight: 200
           border-top-left-radius: 10px
           border-top-right-radius: 10px
         .price
-          margin-top: 53px
+          margin-top: 40px
           .pound
             font-size: 40px
             vertical-align: top
@@ -154,6 +174,7 @@
             font-size: 12px
             color: black
             margin-top: 30px
+            font-weight: 400
         .card-title
           font-weight: 300
         .product_card_ul
@@ -194,13 +215,14 @@
       font-weight: 300
       width: 500px
       font-size: 30px
-      padding: 20px 0
+      padding: 30px 0
     div
-      padding-top: 20px
-      padding-bottom: 20px
+      //padding-top: 20px
+      //padding-bottom: 20px
       font-weight: 300 !important
       font-size: 15px
       color: black
+      line-height: 25px
     .product_ul
       list-style: none
       padding-left: 0
@@ -211,17 +233,142 @@
       .product_li:first-child
         border-top: 1px solid lightgrey
     .footer
-      padding: 0
+      padding-left: 0
       background-color: transparent
       color: #2980b9
+  .first
+    .row
+      .tab_first-content
+        position: absolute
+        display: block
+        top: 75px
+        height: 460px
+        width: 700px
+        z-index: 999
+        right: 250px
+        .header
+          float: right
+          display: block
+          color: black
+          font-weight: 600
+          background: transparent
+        .tab_first-text
+          display: inline-block
+          position: absolute
+          top: 50px
+          text-align: right
+          font-size: 26px
+          font-weight: 300
+        .tab_first-num
+          float: right
+          position: absolute
+          top: 200px
+          right: 0
+          .digit
+            font-size: 336px
+            line-height: 100px
+            font-weight: 800
+          .percent
+            font-size: 35px
+            float: right
+            position: absolute
+            vertical-align: top
+            top: -33px
+            right: 0
+            font-weight: 300
+            margin-left: 20px
+    #product_list_lower
+      padding-left: 30px
+      padding-right: 400px
+      height: 587px
+  .second
+    #product_list_lower
+      height: 572px
+  .footer
+    padding-top: 60px
+
+
+
+  .sub-header
+    .swipe-tabs
+      width: 100vw
+      .slick-list
+        width: 100vw
+        max-width: 100vw
+        margin: 0 auto
+      .slick-list.draggable
+        max-width: 100vw
+      .swipe-tab
+        width: 33.33% !important
+
+
+
+
+
+  //tab
+  .slick-track
+    margin-bottom: 80px
+  .slick-initialized
+    .swipe-tab-content
+      position: relative
+      min-height: 365px
+
+      @media screen and (min-width: 767px)
+        min-height: 500px
+
+    .swipe-tab
+      display: flex
+      align-items: center
+      justify-content: center
+      height: 50px
+      background: rgba(41, 128, 184, .5)
+      border: 0
+      color: white
+      cursor: pointer
+      text-align: center
+      border-bottom: 2px solid rgba($swipe-active-tab-color, 0)
+      transition: all 0.5s
+      font-size: 18px
+      font-weight: 300
+      &:hover
+      &.active-tab
+        background-color: rgba(41, 128, 184, 1)
+        color: white
+        //font-weight: bold
+      &.active-tab.swipe-tab:after
+        //background-color: rgba(41, 128, 184, 1)
+        border-left: 10px solid transparent
+        border-right: 10px solid transparent
+        border-top: 10px solid rgba(41, 128, 184, 1)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 .magento
   background-color: #f6f7f9
   padding: 40px 0
   overflow-x: hidden
+  h1
+    font-weight: 200
   .magento_p
-    padding: 0 200px
+    padding: 0 150px
     font-weight: 200
     font-size: 18px
     margin-top: 20px
@@ -272,9 +419,10 @@
       margin-bottom: 30px
       font-size: 15px
       color: black
+      line-height: 25px
     .footer.try
       padding: 1.5rem 0
-      font-size: 1rem
+      font-size: 14px
       font-weight: 300
       color: #2980b9
       text-decoration: none
@@ -304,13 +452,16 @@
   background: #2980b9
   .slick-list.draggable
     max-width: 100vw
+    left: 15px
   .title
     color: #fff
     margin: 65px auto
     div
       font-weight: 200
       margin-top: 20px
-      font-size: 1rem
+      font-size: 18px
+      padding-left: 200px
+      padding-right: 200px
   .main_div-right
     .container
       width: 100vw
@@ -319,12 +470,12 @@
         .block__body
           top: 100%
           width: inherit
-          height: 333px
+          height: 400px
           margin: 0
         .block
           position: relative
           background: #f9f9f9
-          height: 333px
+          height: 400px
           padding-left: 0
           overflow: hidden
           &:hover
@@ -340,7 +491,7 @@
                 color: #fff
         .block
           img
-            max-width: 600px
+            max-width: 700px
             margin: 0 auto
           p
             margin: 3em
@@ -351,7 +502,7 @@
             color: white
             img
               max-width: 200px
-              padding: 5em 1em 1em 1em
+              padding: 10em 1em 1em 1em
               opacity: 1
 
 
@@ -368,13 +519,12 @@
   .title
     h2
       font-size: 36px
-      font-weight: 300
+      font-weight: 200
     div
       color: black
-      padding-top: 20px
-      padding-bottom: 20px
+      padding: 25px 150px
       font-size: 18px
-      font-weight: 300
+      font-weight: 200
 
   .service_title
     font-size: 24px
@@ -383,6 +533,8 @@
 .news
   background-color: #e9f2f8
   padding: 40px 0
+  h1
+    font-weight: 200
   .card_carousel
     h4
       margin-bottom: 0.75rem
@@ -391,34 +543,26 @@
       font-weight: 200
     p
       font-size: 15px
+      font-weight: 300
     .read_more
       margin-bottom: 20px
       margin-top: 50px
       text-transform: uppercase
       text-decoration: none
       padding-top: 5px
-    //.read_more:after
-    //  content: ">"
-    //  background-color: #2980b9
-    //  color: white
-    //  padding-left: 5px
-    //  margin-left: 10px
-    //  font-size: 10px
-    //  width: 15px
-    //  height: 15px
-    //  line-height: 14px
-    //  display: inline-block
-    //  font-weight: 200
-    //  border-radius: 50%
+      font-weight: 300
     .read_more:hover
       color: #2980b9
+    .card-block
+      padding: 1.5rem 2.5rem
 
 
 #arrow-blue
   content: ">"
   background-color: #2980b9
+  text-align: center
   color: white
-  padding-left: 5px
+  padding-left: 0
   margin-left: 10px
   padding-bottom: 10px
   font-size: 10px
@@ -457,7 +601,7 @@
     .call
       div
         font-size: 29px
-        font-weight: 200
+        font-weight: 100
 #seperator
   display: block
   background: url(../img/seperator.png) no-repeat 0 center
@@ -504,7 +648,7 @@
       font-size: .8rem
     ul
       padding: 0
-      margin-top: 40px
+      margin-top: 20px
     li
       list-style: none
       font-weight: 200
@@ -512,9 +656,9 @@
     .fourth_col
       color: white
       font-size: 25px
-      font-weight: 200
+      font-weight: 100
       li.copyright
-        margin-top: 40px
+        margin-top: 20px
         color: #2980b9
         font-size: 12px
 
@@ -523,21 +667,18 @@
     span
       a
         text-decoration: none
-        color: black
+        color: #434242
 
   .footer_row-social
-    margin-top: 2rem
+    margin-top: 50px
     a
       display: inline-block
       height: fit-content
     img
       margin-right: 50px
-      //max-width: 145px
     img#rock
-      //width: 145px
       height: 40px
     img#ad
-      //width: 190px
       height: 30px
     img#sage
       height: 24px
@@ -557,11 +698,11 @@
 
 // START: timeline
 
-#conference-timeline
-  position: relative
-  max-width: 920px
-  width: 100%
-  margin: 0 auto
+//#conference-timeline
+//  position: relative
+//  max-width: 920px
+//  width: 100%
+//  margin: 0 auto
 
 #conference-timeline .timeline-start,
 #conference-timeline .timeline-end
@@ -580,16 +721,12 @@
 
 #conference-timeline .conference-center-line
   position: absolute
-  height: 67.7%
-  top: 290px
+  height: 71%
+  top: 264px
   left: 50.5%
   margin-left: -2px
-  border: .5px dotted black
+  border: .5px dotted gray
   z-index: -1
-
-#conference-timeline .conference-timeline-content
-  padding-top: 67px
-  padding-bottom: 67px
 
 .timeline-article
   width: 100%
@@ -608,7 +745,7 @@
   font-weight: 400
   font-size: 14px
   line-height: 24px
-  color: #242424
+  color: #434242
   text-align: right
 
 .timeline-article .content-left,
@@ -634,8 +771,8 @@
   //margin: 0 0 0 60px
   padding: 0
   font-weight: 400
-  color: #242424
-  font-size: 14px
+  color: #434242
+  font-size: 15px
   line-height: 24px
   position: relative
   margin-top: 20px
@@ -681,12 +818,12 @@
   border-radius: 100%
 
 .meta-date.img1
-  top: 0
+  top: 32px
   background: url(../img/service-brain.png) no-repeat 0 center
   background-size: 50px
 
 .meta-date.img2
-  top: 250px
+  top: 247px
   background: url(../img/service-pen.png) no-repeat 0 center
   background-size: 50px
 
@@ -702,7 +839,7 @@
 
 
 .meta-date.img5
-  top: 260px
+  top: 240px
   background: url(../img/service-screen.png) no-repeat 0 center
   background-size: 50px
 
@@ -720,16 +857,17 @@
   font-size: 18px
   line-height: 10px
 
-//  custom
 
+
+//  custom
 .service-bottom
   text-decoration: none !important
+  font-size: 14px
 
 .service-bottom:hover
   color: #2980b9
 
-.meta-date.img1
-  top: 0px
+
 
 /*===== // Vetical Timeline =====*/
 
@@ -801,13 +939,73 @@
 //.xs-menu-cont
 //  display: block
 
+
+
+.header
+  .btn.btn-circle-white
+    padding: 9px
+    margin: 0
+    color: #2980b9
+    width: 180px
+    border: 0
+    margin-top: 70px
+    border-bottom: 1px solid #2980b8
+  .mega_left
+    .mm-3column.fourth
+      background-color: #2980b8 !important
+      height: 425px
+      width: 290px
+      float: right
+      .categories-list
+        ul
+          padding: 0 40px
+          font-weight: 100
+          span
+            color: white
+            text-transform: lowercase
+            font-weight: 100
+            line-height: 40px
+            display: block
+  .mega_left
+    .mm-3column
+      li
+        transition: padding .5s ease
+
+  .mega_left
+    .mm-3column
+      ul
+        margin-top: 50px
+      .ul_first
+        margin-left: 50px
+      a:hover
+        padding-left: 10px
+        border-bottom: 0
+        color: #434242
+        .li_arrow
+          background: url(../img/mega-arrow_left.png) no-repeat 0 center
+          display: inline-block
+          width: 7px
+          background-size: 7px 9px
+          height: 9px
+          margin-right: 5px
+
+  #cuppa
+    height: fit-content
+    width: 58px
+    margin-top: 13px
+    line-height: 18px
+  #cuppa_li
+    a
+      border: 0
+
+
 .container:after,
 .container:before
   content: ""
   clear: both
 
 nav.menu
-  background: white
+  background: transparent
   position: relative
   min-height: 45px
   height: 60px
@@ -822,7 +1020,12 @@ nav.menu
   list-style: none
   display: inline-block
   color: #fff
-  line-height: 43px
+  line-height: 53px
+  font-size: 14px
+.menu ul .drop-down
+  line-height: 57px
+
+
 
 .menu ul li img
   width: 60px
@@ -831,7 +1034,7 @@ nav.menu
 .menu ul li #header_cup
   width: 40px
   height: 30px
-  margin: 5px
+  margin: 15px
 
 .menu #cuppa_li
   background-color: #2980b8
@@ -842,26 +1045,36 @@ nav.menu
 .menu #cuppa_li a
   color: white
   line-height: 22px
+  display: flex
 
 .menu > ul li a,
 .xs-menu li a
   text-decoration: none
-  color: black
+  color: #434242
   display: block
-  padding: 7px 0
+  margin-right: 35px
+  font-weight: 300
+  //height: 65px
 
 .menu > ul li a:hover
   border-bottom: 5px solid #2980b8
   color: #2980b8
+  z-index: 1000
   transition-duration: 0.3s
   -moz-transition-duration: 0.3s
   -webkit-transition-duration: 0.3s
+.mega-menu > ul li a:hover
+  border-bottom: 0
+
+
+
 
 //.active
 //  background: #444 !important
 .mega-menu
   z-index: 999
   width: 70%
+  height: 425px
   left: 200px
   text-align: left
 
@@ -896,20 +1109,19 @@ nav.menu
 .mega-menu
   background: none repeat scroll 0 0 white
   //left: 0
-  margin-top: 3px
+  margin-top: -4px
   position: absolute
   //width: 100%
-  padding: 50px
+  //padding: 50px
   display: none
   transition-duration: 0.9s
   z-index: 999
-  width: 70%
-  left: 200px
-
+  width: 67%
+  left: 300px
 
   .categories-list
     span
-      color: black
+      color: #434242
       font-size: 29px
       font-weight: 300
 
@@ -918,5 +1130,26 @@ nav.menu
   font-size: 33px
   margin: 0
   padding: 0
+
+.header_arrow
+  background: url(../img/header-down_arrow.png) no-repeat 0 center
+  display: inline-block
+  width: 15px
+  margin-left: 2px
+  background-size: 12px 8px
+  height: 10px
+  transition: background .5s ease
+
+.header_arrow.display-on
+  background: url(../img/header-up_arrow.png) no-repeat 0 center
+  display: inline-block
+  width: 15px
+  margin-left: 2px
+  background-size: 12px 8px
+  height: 10px
+  transition: background .5s ease
+
+
+
 
 /* END: NAV */

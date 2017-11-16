@@ -57,7 +57,7 @@ section {
 }
 
 h1 {
-  font-weight: 200;
+  font-weight: 100;
   font-size: 36px;
   margin-bottom: 0.8rem;
   margin: 0 auto;
@@ -66,7 +66,7 @@ h1 {
 p {
   font-weight: 400;
   font-size: 1rem;
-  color: black;
+  color: #434242;
 }
 
 button:focus {
@@ -136,6 +136,20 @@ a:focus, a:hover, .card.slick-slide {
   margin-left: 25px;
 }
 
+.swipe-tab:after {
+  content: "";
+  z-index: 1000;
+  margin: 0 auto;
+  display: inline-block;
+  height: 0;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-top: 10px solid rgba(41, 128, 184, 0.5);
+  clear: both;
+  top: 50px;
+  position: absolute;
+}
+
 .learn_more:before {
   content: " ";
   background: url(../img/icon/red_arrow.png) no-repeat;
@@ -189,24 +203,6 @@ a:focus, a:hover, .card.slick-slide {
   margin-bottom: 40px;
 }
 
-.testimonial .slick-prev.slick-arrow:before {
-  content: "";
-  background: url(../img/left_arrow-blue.png) no-repeat;
-  background-size: 36px;
-  width: 50px;
-  height: 67px;
-  z-index: 999;
-}
-
-.testimonial .slick-next.slick-arrow:before {
-  content: "";
-  background: url(../img/right_arrow-blue.png) no-repeat;
-  background-size: 36px;
-  width: 50px;
-  height: 67px;
-  z-index: 999;
-}
-
 .slick-prev.slick-arrow, .slick-next.slick-arrow {
   position: absolute;
   bottom: 0;
@@ -225,6 +221,32 @@ a:focus, a:hover, .card.slick-slide {
   width: 17%;
   height: inherit;
   text-align: center;
+  z-index: 999;
+}
+
+.slick-prev.slick-arrow {
+  margin-left: 100px;
+}
+
+.slick-next.slick-arrow {
+  margin-right: 100px;
+}
+
+.slick-prev.slick-arrow:before {
+  content: "";
+  background: url(../img/left_arrow-blue.png) no-repeat;
+  background-size: 36px;
+  width: 50px;
+  height: 67px;
+  z-index: 999;
+}
+
+.slick-next.slick-arrow:before {
+  content: "";
+  background: url(../img/right_arrow-blue.png) no-repeat;
+  background-size: 36px;
+  width: 50px;
+  height: 67px;
   z-index: 999;
 }
 
@@ -293,8 +315,15 @@ a:focus, a:hover, .card.slick-slide {
 }
 
 @media screen and (min-width: 320px) {
+  *:focus {
+    outline: 0;
+  }
+
   .header {
-    font-family: "Raleway", sans-serif;
+    position: absolute;
+    width: 100vw;
+    background: rgba(255, 255, 255, 0.8);
+    height: 60px;
   }
 
   .main_banner {
@@ -308,7 +337,7 @@ a:focus, a:hover, .card.slick-slide {
     display: inline-block;
     width: 100%;
     color: white;
-    padding: 40px;
+    margin-top: 50px;
   }
   .main_banner div .main_div-l {
     position: relative;
@@ -317,22 +346,31 @@ a:focus, a:hover, .card.slick-slide {
     left: 300px;
     height: 400px;
     width: 333px;
+    padding: 0;
   }
   .main_banner div .main_div-l span {
     font-size: 14px;
+    margin-left: 40px;
+    margin-right: 40px;
   }
   .main_banner div .main_div-l p {
     font-size: 36px;
     color: white;
     margin-bottom: 40px;
     margin-top: 10px;
-    font-weight: 200;
+    margin-left: 40px;
+    margin-right: 40px;
+    font-weight: 100;
   }
   .main_banner div .main_div-l a {
     color: white;
     text-decoration: none;
+    margin-left: 40px;
+    margin-right: 40px;
+    font-weight: 200;
   }
   .main_banner div .square {
+    margin-top: 40px;
     display: block;
     width: 0;
     height: 0;
@@ -356,13 +394,14 @@ a:focus, a:hover, .card.slick-slide {
     padding: 20px 0;
     color: white;
   }
-
-  .main_banner:after {
-    content: " ";
+  .main_banner .go_down {
     margin: 0 auto;
-    width: 30px;
-    height: 30px;
-    background-color: green;
+    width: 50px;
+    height: 50px;
+    display: block;
+    position: relative;
+    transform: translateY(50%);
+    transition: top 0.5s ease;
   }
 
   .top4 {
@@ -389,13 +428,11 @@ a:focus, a:hover, .card.slick-slide {
     padding: 0;
   }
   .top4 .top4_card .card-block .img_box {
-    width: 100px;
-    height: 100px;
+    width: 80px;
+    height: 80px;
     margin: 0 auto;
-  }
-  .top4 .top4_card .card-block img {
-    width: 90px;
-    height: 90px;
+    display: flex;
+    justify-content: center;
   }
   .top4 .top4_card .card-block img:hover {
     -moz-transition: all 1s ease;
@@ -405,22 +442,20 @@ a:focus, a:hover, .card.slick-slide {
     transform: scale(1.1);
   }
   .top4 .top4_card .card-block img.top-business {
-    width: 80px;
-    height: 90px;
-    margin: 10px auto;
+    width: 65px;
+    height: 80px;
   }
   .top4 .top4_card .card-block img.top-tech {
-    width: 70px;
-    height: 70px;
-    margin: 20px auto;
+    width: 80px;
+    height: 80px;
   }
   .top4 .top4_card .card-block img.top-track {
     width: 80px;
     height: 80px;
-    margin: 20px auto;
   }
   .top4 .top4_card .card-block img.top-best {
-    margin: 10px auto;
+    width: 80px;
+    height: 80px;
   }
   .top4 .top4_card .card-block h5 {
     padding: 20px 0;
@@ -430,7 +465,6 @@ a:focus, a:hover, .card.slick-slide {
 
   .bespoke {
     background-color: #e9f2f8;
-    padding: 40px 0;
     overflow-x: hidden;
   }
   .bespoke .main_div-l {
@@ -440,6 +474,9 @@ a:focus, a:hover, .card.slick-slide {
     border-radius: 10px;
     margin-right: 0;
     margin-left: 0;
+    -webkit-box-shadow: 5px 5px 16px 2px rgba(41, 128, 184, 0.2);
+    -moz-box-shadow: 5px 5px 16px 2px rgba(41, 128, 184, 0.2);
+    box-shadow: 5px 5px 16px 2px rgba(41, 128, 184, 0.2);
   }
   .bespoke .main_div-l .card .card-block {
     font-weight: 300;
@@ -454,12 +491,12 @@ a:focus, a:hover, .card.slick-slide {
     background-color: #2980b9;
     color: white;
     padding: 20px 0;
-    font-weight: 300;
+    font-weight: 200;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
   }
   .bespoke .main_div-l .card .card-block .price {
-    margin-top: 53px;
+    margin-top: 40px;
   }
   .bespoke .main_div-l .card .card-block .price .pound {
     font-size: 40px;
@@ -469,6 +506,7 @@ a:focus, a:hover, .card.slick-slide {
     font-size: 12px;
     color: black;
     margin-top: 30px;
+    font-weight: 400;
   }
   .bespoke .main_div-l .card .card-block .card-title {
     font-weight: 300;
@@ -517,14 +555,13 @@ a:focus, a:hover, .card.slick-slide {
     font-weight: 300;
     width: 500px;
     font-size: 30px;
-    padding: 20px 0;
+    padding: 30px 0;
   }
   .bespoke .main_div-r div {
-    padding-top: 20px;
-    padding-bottom: 20px;
     font-weight: 300 !important;
     font-size: 15px;
     color: black;
+    line-height: 25px;
   }
   .bespoke .main_div-r .product_ul {
     list-style: none;
@@ -539,9 +576,117 @@ a:focus, a:hover, .card.slick-slide {
     border-top: 1px solid lightgrey;
   }
   .bespoke .main_div-r .footer {
-    padding: 0;
+    padding-left: 0;
     background-color: transparent;
     color: #2980b9;
+  }
+  .bespoke .first .row .tab_first-content {
+    position: absolute;
+    display: block;
+    top: 75px;
+    height: 460px;
+    width: 700px;
+    z-index: 999;
+    right: 250px;
+  }
+  .bespoke .first .row .tab_first-content .header {
+    float: right;
+    display: block;
+    color: black;
+    font-weight: 600;
+    background: transparent;
+  }
+  .bespoke .first .row .tab_first-content .tab_first-text {
+    display: inline-block;
+    position: absolute;
+    top: 50px;
+    text-align: right;
+    font-size: 26px;
+    font-weight: 300;
+  }
+  .bespoke .first .row .tab_first-content .tab_first-num {
+    float: right;
+    position: absolute;
+    top: 200px;
+    right: 0;
+  }
+  .bespoke .first .row .tab_first-content .tab_first-num .digit {
+    font-size: 336px;
+    line-height: 100px;
+    font-weight: 800;
+  }
+  .bespoke .first .row .tab_first-content .tab_first-num .percent {
+    font-size: 35px;
+    float: right;
+    position: absolute;
+    vertical-align: top;
+    top: -33px;
+    right: 0;
+    font-weight: 300;
+    margin-left: 20px;
+  }
+  .bespoke .first #product_list_lower {
+    padding-left: 30px;
+    padding-right: 400px;
+    height: 587px;
+  }
+  .bespoke .second #product_list_lower {
+    height: 572px;
+  }
+  .bespoke .footer {
+    padding-top: 60px;
+  }
+  .bespoke .sub-header .swipe-tabs {
+    width: 100vw;
+  }
+  .bespoke .sub-header .swipe-tabs .slick-list {
+    width: 100vw;
+    max-width: 100vw;
+    margin: 0 auto;
+  }
+  .bespoke .sub-header .swipe-tabs .slick-list.draggable {
+    max-width: 100vw;
+  }
+  .bespoke .sub-header .swipe-tabs .swipe-tab {
+    width: 33.33% !important;
+  }
+  .bespoke .slick-track {
+    margin-bottom: 80px;
+  }
+  .bespoke .slick-initialized .swipe-tab-content {
+    position: relative;
+    min-height: 365px;
+  }
+}
+@media screen and (min-width: 320px) and (min-width: 767px) {
+  .bespoke .slick-initialized .swipe-tab-content {
+    min-height: 500px;
+  }
+}
+@media screen and (min-width: 320px) {
+  .bespoke .slick-initialized .swipe-tab {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 50px;
+    background: rgba(41, 128, 184, 0.5);
+    border: 0;
+    color: white;
+    cursor: pointer;
+    text-align: center;
+    border-bottom: 2px solid rgba(0, 0, 0, 0);
+    transition: all 0.5s;
+    font-size: 18px;
+    font-weight: 300;
+  }
+  .bespoke .slick-initialized .swipe-tab.active-tab {
+    background-color: #2980b8;
+    color: white;
+  }
+  .bespoke .slick-initialized .swipe-tab.active-tab.swipe-tab:after {
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-top: 10px solid #2980b8;
   }
 
   .magento {
@@ -549,8 +694,11 @@ a:focus, a:hover, .card.slick-slide {
     padding: 40px 0;
     overflow-x: hidden;
   }
+  .magento h1 {
+    font-weight: 200;
+  }
   .magento .magento_p {
-    padding: 0 200px;
+    padding: 0 150px;
     font-weight: 200;
     font-size: 18px;
     margin-top: 20px;
@@ -610,10 +758,11 @@ a:focus, a:hover, .card.slick-slide {
     margin-bottom: 30px;
     font-size: 15px;
     color: black;
+    line-height: 25px;
   }
   .testimonial .main_div-r .footer.try {
     padding: 1.5rem 0;
-    font-size: 1rem;
+    font-size: 14px;
     font-weight: 300;
     color: #2980b9;
     text-decoration: none;
@@ -644,6 +793,7 @@ a:focus, a:hover, .card.slick-slide {
   }
   .latest .slick-list.draggable {
     max-width: 100vw;
+    left: 15px;
   }
   .latest .title {
     color: #fff;
@@ -652,7 +802,9 @@ a:focus, a:hover, .card.slick-slide {
   .latest .title div {
     font-weight: 200;
     margin-top: 20px;
-    font-size: 1rem;
+    font-size: 18px;
+    padding-left: 200px;
+    padding-right: 200px;
   }
   .latest .main_div-right .container {
     width: 100vw;
@@ -661,13 +813,13 @@ a:focus, a:hover, .card.slick-slide {
   .latest .main_div-right .container .blocks .block__body {
     top: 100%;
     width: inherit;
-    height: 333px;
+    height: 400px;
     margin: 0;
   }
   .latest .main_div-right .container .blocks .block {
     position: relative;
     background: #f9f9f9;
-    height: 333px;
+    height: 400px;
     padding-left: 0;
     overflow: hidden;
   }
@@ -684,7 +836,7 @@ a:focus, a:hover, .card.slick-slide {
     color: #fff;
   }
   .latest .main_div-right .container .blocks .block img {
-    max-width: 600px;
+    max-width: 700px;
     margin: 0 auto;
   }
   .latest .main_div-right .container .blocks .block p {
@@ -697,7 +849,7 @@ a:focus, a:hover, .card.slick-slide {
   }
   .latest .main_div-right .container .blocks .block__body a img {
     max-width: 200px;
-    padding: 5em 1em 1em 1em;
+    padding: 10em 1em 1em 1em;
     opacity: 1;
   }
   .latest .slick-dotted.slick-slider {
@@ -711,14 +863,13 @@ a:focus, a:hover, .card.slick-slide {
   }
   .service .title h2 {
     font-size: 36px;
-    font-weight: 300;
+    font-weight: 200;
   }
   .service .title div {
     color: black;
-    padding-top: 20px;
-    padding-bottom: 20px;
+    padding: 25px 150px;
     font-size: 18px;
-    font-weight: 300;
+    font-weight: 200;
   }
   .service .service_title {
     font-size: 24px;
@@ -729,6 +880,9 @@ a:focus, a:hover, .card.slick-slide {
     background-color: #e9f2f8;
     padding: 40px 0;
   }
+  .news h1 {
+    font-weight: 200;
+  }
   .news .card_carousel h4 {
     margin-bottom: 0.75rem;
     color: #2980b9;
@@ -737,6 +891,7 @@ a:focus, a:hover, .card.slick-slide {
   }
   .news .card_carousel p {
     font-size: 15px;
+    font-weight: 300;
   }
   .news .card_carousel .read_more {
     margin-bottom: 20px;
@@ -744,16 +899,21 @@ a:focus, a:hover, .card.slick-slide {
     text-transform: uppercase;
     text-decoration: none;
     padding-top: 5px;
+    font-weight: 300;
   }
   .news .card_carousel .read_more:hover {
     color: #2980b9;
+  }
+  .news .card_carousel .card-block {
+    padding: 1.5rem 2.5rem;
   }
 
   #arrow-blue {
     content: ">";
     background-color: #2980b9;
+    text-align: center;
     color: white;
-    padding-left: 5px;
+    padding-left: 0;
     margin-left: 10px;
     padding-bottom: 10px;
     font-size: 10px;
@@ -796,7 +956,7 @@ a:focus, a:hover, .card.slick-slide {
   }
   .contact .footer_row-link .call div {
     font-size: 29px;
-    font-weight: 200;
+    font-weight: 100;
   }
 
   #seperator {
@@ -852,7 +1012,7 @@ a:focus, a:hover, .card.slick-slide {
   }
   .footer .footer_row-link ul {
     padding: 0;
-    margin-top: 40px;
+    margin-top: 20px;
   }
   .footer .footer_row-link li {
     list-style: none;
@@ -862,10 +1022,10 @@ a:focus, a:hover, .card.slick-slide {
   .footer .footer_row-link .fourth_col {
     color: white;
     font-size: 25px;
-    font-weight: 200;
+    font-weight: 100;
   }
   .footer .footer_row-link .fourth_col li.copyright {
-    margin-top: 40px;
+    margin-top: 20px;
     color: #2980b9;
     font-size: 12px;
   }
@@ -874,10 +1034,10 @@ a:focus, a:hover, .card.slick-slide {
   }
   .footer .footer_row-copyright span a {
     text-decoration: none;
-    color: black;
+    color: #434242;
   }
   .footer .footer_row-social {
-    margin-top: 2rem;
+    margin-top: 50px;
   }
   .footer .footer_row-social a {
     display: inline-block;
@@ -906,13 +1066,6 @@ a:focus, a:hover, .card.slick-slide {
     height: 25px;
   }
 
-  #conference-timeline {
-    position: relative;
-    max-width: 920px;
-    width: 100%;
-    margin: 0 auto;
-  }
-
   #conference-timeline .timeline-start,
   #conference-timeline .timeline-end {
     display: table;
@@ -931,17 +1084,12 @@ a:focus, a:hover, .card.slick-slide {
 
   #conference-timeline .conference-center-line {
     position: absolute;
-    height: 67.7%;
-    top: 290px;
+    height: 71%;
+    top: 264px;
     left: 50.5%;
     margin-left: -2px;
-    border: 0.5px dotted black;
+    border: 0.5px dotted gray;
     z-index: -1;
-  }
-
-  #conference-timeline .conference-timeline-content {
-    padding-top: 67px;
-    padding-bottom: 67px;
   }
 
   .timeline-article {
@@ -963,7 +1111,7 @@ a:focus, a:hover, .card.slick-slide {
     font-weight: 400;
     font-size: 14px;
     line-height: 24px;
-    color: #242424;
+    color: #434242;
     text-align: right;
   }
 
@@ -988,8 +1136,8 @@ a:focus, a:hover, .card.slick-slide {
   .timeline-article p {
     padding: 0;
     font-weight: 400;
-    color: #242424;
-    font-size: 14px;
+    color: #434242;
+    font-size: 15px;
     line-height: 24px;
     position: relative;
     margin-top: 20px;
@@ -1043,13 +1191,13 @@ a:focus, a:hover, .card.slick-slide {
   }
 
   .meta-date.img1 {
-    top: 0;
+    top: 32px;
     background: url(../img/service-brain.png) no-repeat 0 center;
     background-size: 50px;
   }
 
   .meta-date.img2 {
-    top: 250px;
+    top: 247px;
     background: url(../img/service-pen.png) no-repeat 0 center;
     background-size: 50px;
   }
@@ -1067,7 +1215,7 @@ a:focus, a:hover, .card.slick-slide {
   }
 
   .meta-date.img5 {
-    top: 260px;
+    top: 240px;
     background: url(../img/service-screen.png) no-repeat 0 center;
     background-size: 50px;
   }
@@ -1091,19 +1239,74 @@ a:focus, a:hover, .card.slick-slide {
 
   .service-bottom {
     text-decoration: none !important;
+    font-size: 14px;
   }
 
   .service-bottom:hover {
     color: #2980b9;
   }
 
-  .meta-date.img1 {
-    top: 0px;
-  }
-
   /*===== // Vetical Timeline ===== */
   /*===== MOBILE Resonsive Vertical Timeline ===== */
   /* START: NAV */
+  .header .btn.btn-circle-white {
+    padding: 9px;
+    margin: 0;
+    color: #2980b9;
+    width: 180px;
+    border: 0;
+    margin-top: 70px;
+    border-bottom: 1px solid #2980b8;
+  }
+  .header .mega_left .mm-3column.fourth {
+    background-color: #2980b8 !important;
+    height: 425px;
+    width: 290px;
+    float: right;
+  }
+  .header .mega_left .mm-3column.fourth .categories-list ul {
+    padding: 0 40px;
+    font-weight: 100;
+  }
+  .header .mega_left .mm-3column.fourth .categories-list ul span {
+    color: white;
+    text-transform: lowercase;
+    font-weight: 100;
+    line-height: 40px;
+    display: block;
+  }
+  .header .mega_left .mm-3column li {
+    transition: padding 0.5s ease;
+  }
+  .header .mega_left .mm-3column ul {
+    margin-top: 50px;
+  }
+  .header .mega_left .mm-3column .ul_first {
+    margin-left: 50px;
+  }
+  .header .mega_left .mm-3column a:hover {
+    padding-left: 10px;
+    border-bottom: 0;
+    color: #434242;
+  }
+  .header .mega_left .mm-3column a:hover .li_arrow {
+    background: url(../img/mega-arrow_left.png) no-repeat 0 center;
+    display: inline-block;
+    width: 7px;
+    background-size: 7px 9px;
+    height: 9px;
+    margin-right: 5px;
+  }
+  .header #cuppa {
+    height: fit-content;
+    width: 58px;
+    margin-top: 13px;
+    line-height: 18px;
+  }
+  .header #cuppa_li a {
+    border: 0;
+  }
+
   .container:after,
   .container:before {
     content: "";
@@ -1111,7 +1314,7 @@ a:focus, a:hover, .card.slick-slide {
   }
 
   nav.menu {
-    background: white;
+    background: transparent;
     position: relative;
     min-height: 45px;
     height: 60px;
@@ -1125,7 +1328,12 @@ a:focus, a:hover, .card.slick-slide {
     list-style: none;
     display: inline-block;
     color: #fff;
-    line-height: 43px;
+    line-height: 53px;
+    font-size: 14px;
+  }
+
+  .menu ul .drop-down {
+    line-height: 57px;
   }
 
   .menu ul li img {
@@ -1137,7 +1345,7 @@ a:focus, a:hover, .card.slick-slide {
   .menu ul li #header_cup {
     width: 40px;
     height: 30px;
-    margin: 5px;
+    margin: 15px;
   }
 
   .menu #cuppa_li {
@@ -1150,27 +1358,35 @@ a:focus, a:hover, .card.slick-slide {
   .menu #cuppa_li a {
     color: white;
     line-height: 22px;
+    display: flex;
   }
 
   .menu > ul li a,
   .xs-menu li a {
     text-decoration: none;
-    color: black;
+    color: #434242;
     display: block;
-    padding: 7px 0;
+    margin-right: 35px;
+    font-weight: 300;
   }
 
   .menu > ul li a:hover {
     border-bottom: 5px solid #2980b8;
     color: #2980b8;
+    z-index: 1000;
     transition-duration: 0.3s;
     -moz-transition-duration: 0.3s;
     -webkit-transition-duration: 0.3s;
   }
 
+  .mega-menu > ul li a:hover {
+    border-bottom: 0;
+  }
+
   .mega-menu {
     z-index: 999;
     width: 70%;
+    height: 425px;
     left: 200px;
     text-align: left;
   }
@@ -1211,17 +1427,16 @@ a:focus, a:hover, .card.slick-slide {
 
   .mega-menu {
     background: none repeat scroll 0 0 white;
-    margin-top: 3px;
+    margin-top: -4px;
     position: absolute;
-    padding: 50px;
     display: none;
     transition-duration: 0.9s;
     z-index: 999;
-    width: 70%;
-    left: 200px;
+    width: 67%;
+    left: 300px;
   }
   .mega-menu .categories-list span {
-    color: black;
+    color: #434242;
     font-size: 29px;
     font-weight: 300;
   }
@@ -1231,6 +1446,26 @@ a:focus, a:hover, .card.slick-slide {
     font-size: 33px;
     margin: 0;
     padding: 0;
+  }
+
+  .header_arrow {
+    background: url(../img/header-down_arrow.png) no-repeat 0 center;
+    display: inline-block;
+    width: 15px;
+    margin-left: 2px;
+    background-size: 12px 8px;
+    height: 10px;
+    transition: background 0.5s ease;
+  }
+
+  .header_arrow.display-on {
+    background: url(../img/header-up_arrow.png) no-repeat 0 center;
+    display: inline-block;
+    width: 15px;
+    margin-left: 2px;
+    background-size: 12px 8px;
+    height: 10px;
+    transition: background 0.5s ease;
   }
 
   /* END: NAV */
@@ -1284,7 +1519,7 @@ a:focus, a:hover, .card.slick-slide {
   }
 
   .categories-list li :hover {
-    color: black;
+    color: #434242;
     border-bottom: 0px;
   }
 
@@ -1315,18 +1550,6 @@ a:focus, a:hover, .card.slick-slide {
   .display-on {
     display: block;
     transition-duration: 0.9s;
-  }
-
-  .drop-down > a:after {
-    content: "";
-    color: #fff;
-    font-family: "Open Sans";
-    font-style: normal;
-    margin-left: 5px;
-  }
-
-  .mega_left {
-    padding: 50px;
   }
 
   /*Animation-- */
@@ -1368,9 +1591,6 @@ a:focus, a:hover, .card.slick-slide {
     left: 0;
   }
 
-  .bespoke {
-    padding: 100px 0;
-  }
   .bespoke .container .row .main_div-r {
     padding: 0;
   }
@@ -1402,7 +1622,7 @@ a:focus, a:hover, .card.slick-slide {
 
   #product_list_lower {
     display: block;
-    padding-left: 100px;
+    padding-left: 50px;
   }
 
   .magento {
@@ -1445,11 +1665,13 @@ a:focus, a:hover, .card.slick-slide {
     font-weight: 300;
     padding-bottom: 20px;
     font-size: 14px;
+    padding-left: 20px;
+    padding-right: 20px;
   }
 
   .latest .container {
-    padding-top: 80px;
-    padding-bottom: 120px;
+    padding-top: 60px;
+    padding-bottom: 60px;
     margin: 0 auto;
   }
   .latest .container .main_div-l .container .blocks {

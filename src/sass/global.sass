@@ -52,7 +52,7 @@ section
   //overflow-y: hidden
 
 h1
-    font-weight: 200
+    font-weight: 100
     font-size: 36px
     margin-bottom: .8rem
     margin: 0 auto
@@ -60,7 +60,7 @@ h1
 p
   font-weight: 400
   font-size: 1rem
-  color: black
+  color: #434242 // new black
 
 button:focus
   outline: 0
@@ -133,16 +133,18 @@ a:focus, a:hover, .card.slick-slide
   margin-left: 25px
 
 //triangle
-//.partners:before
-//  content: ''
-//  z-index: 1000
-//  margin-left: 47%
-//  display: inline-block
-//  height: 0
-//  border-left: 20px solid transparent
-//  border-right: 20px solid transparent
-//  border-top: 20px solid #fff
-//  clear: both
+.swipe-tab:after
+  content: ''
+  z-index: 1000
+  margin: 0 auto
+  display: inline-block
+  height: 0
+  border-left: 10px solid transparent
+  border-right: 10px solid transparent
+  border-top: 10px solid rgba(41, 128, 184, .5)
+  clear: both
+  top: 50px
+  position: absolute
 
 //red arrow left
 .learn_more:before
@@ -234,40 +236,6 @@ a:focus, a:hover, .card.slick-slide
   margin-bottom: 40px
 
 // slicker arrow
-.testimonial
-  .slick-prev.slick-arrow:before
-    content: ''
-    background:  url(../img/left_arrow-blue.png) no-repeat
-    background-size: 36px
-    width: 50px
-    height: 67px
-    z-index: 999
-
-.testimonial
-  .slick-next.slick-arrow:before
-    content: ''
-    background:  url(../img/right_arrow-blue.png) no-repeat
-    background-size: 36px
-    width: 50px
-    height: 67px
-    z-index: 999
-
-//.slick-prev:before
-//  content: ''
-//  background:  url(../img/icon/arrow_left_black_lg.png) no-repeat
-//  background-size: 50px
-//  width: 50px
-//  height: 50px
-//  z-index: 999
-//
-//.slick-next:before
-//  content: ''
-//  background:  url(../img/icon/arrow_right_black_lg.png) no-repeat
-//  background-size: 50px
-//  width: 50px
-//  height: 50px
-//  z-index: 999
-
 .slick-prev.slick-arrow, .slick-next.slick-arrow
   //display: flex
   position: absolute
@@ -288,6 +256,26 @@ a:focus, a:hover, .card.slick-slide
   height: inherit
   text-align: center
   z-index: 999
+.slick-prev.slick-arrow
+  margin-left: 100px
+.slick-next.slick-arrow
+  margin-right: 100px
+.slick-prev.slick-arrow:before
+  content: ''
+  background: url(../img/left_arrow-blue.png) no-repeat
+  background-size: 36px
+  width: 50px
+  height: 67px
+  z-index: 999
+
+.slick-next.slick-arrow:before
+  content: ''
+  background: url(../img/right_arrow-blue.png) no-repeat
+  background-size: 36px
+  width: 50px
+  height: 67px
+  z-index: 999
+
 
 // START: dot indicator
 .slick-dots
