@@ -150,25 +150,6 @@ a:focus, a:hover, .card.slick-slide {
   position: absolute;
 }
 
-.learn_more:before {
-  content: " ";
-  background: url(../img/icon/red_arrow.png) no-repeat;
-  background-position: bottom;
-  display: inline-block;
-  width: 15px;
-  height: 15px;
-}
-
-.platform_features .main_div-r .footer:before {
-  content: " ";
-  background: url(../img/icon/arrow_sm_left_white.png) no-repeat;
-  background-position: bottom;
-  display: inline-block;
-  width: 15px;
-  height: 15px;
-  margin-right: 10px;
-}
-
 .magento a.read_more:before,
 .product .main_div-right .footer:before {
   content: " ";
@@ -196,6 +177,26 @@ a:focus, a:hover, .card.slick-slide {
 .bespoke .slick-dots li.slick-active button:before {
   opacity: 1;
   color: #b11f37;
+}
+
+#arrow-blue {
+  content: ">";
+  background-color: #2980b9;
+  text-align: center;
+  color: white;
+  padding-left: 0;
+  margin-left: 10px;
+  padding-bottom: 10px;
+  font-size: 10px;
+  width: 15px;
+  height: 15px;
+  line-height: 14px;
+  display: inline-block;
+  font-weight: 200;
+  border-radius: 50%;
+  position: relative;
+  transform: translateY(-15%);
+  top: 50%;
 }
 
 .slick-dotted.slick-slider {
@@ -325,6 +326,9 @@ a:focus, a:hover, .card.slick-slide {
     background: rgba(255, 255, 255, 0.8);
     height: 60px;
   }
+  .header .menu ul {
+    height: 60px;
+  }
 
   .main_banner {
     background: linear-gradient(rgba(41, 128, 184, 0.25), rgba(41, 128, 184, 0.25)), url(../img/main-bg.png) no-repeat;
@@ -338,13 +342,14 @@ a:focus, a:hover, .card.slick-slide {
     width: 100%;
     color: white;
     margin-top: 50px;
+    font-weight: 100;
   }
   .main_banner div .main_div-l {
     position: relative;
     background-color: #2980b9;
     top: -240px;
-    left: 300px;
-    height: 400px;
+    left: 320px;
+    height: 343px;
     width: 333px;
     padding: 0;
   }
@@ -356,11 +361,12 @@ a:focus, a:hover, .card.slick-slide {
   .main_banner div .main_div-l p {
     font-size: 36px;
     color: white;
-    margin-bottom: 40px;
+    margin-bottom: 30px;
     margin-top: 10px;
     margin-left: 40px;
     margin-right: 40px;
     font-weight: 100;
+    line-height: 40px;
   }
   .main_banner div .main_div-l a {
     color: white;
@@ -370,12 +376,12 @@ a:focus, a:hover, .card.slick-slide {
     font-weight: 200;
   }
   .main_banner div .square {
-    margin-top: 40px;
+    margin-top: 50px;
     display: block;
     width: 0;
     height: 0;
     border-style: solid;
-    border-width: 110px 333px 0 0;
+    border-width: 95px 333px 0 0;
     border-color: #2980b9 transparent transparent transparent;
   }
   .main_banner div .main_div-r {
@@ -423,7 +429,7 @@ a:focus, a:hover, .card.slick-slide {
   .top4 .top4_card .card-block {
     border: 0;
     box-shadow: none;
-    color: black;
+    color: #434242;
     margin: 0;
     padding: 0;
   }
@@ -461,6 +467,19 @@ a:focus, a:hover, .card.slick-slide {
     padding: 20px 0;
     font-weight: 200;
     font-size: 21px;
+    letter-spacing: 0.5px;
+  }
+  .top4 .top4_card .card {
+    width: 25%;
+  }
+
+  .top4 .container {
+    width: 1200px;
+    padding: 0;
+  }
+
+  a:hover {
+    color: #2980b9;
   }
 
   .bespoke {
@@ -504,7 +523,7 @@ a:focus, a:hover, .card.slick-slide {
   }
   .bespoke .main_div-l .card .card-block .price .bill {
     font-size: 12px;
-    color: black;
+    color: #434242;
     margin-top: 30px;
     font-weight: 400;
   }
@@ -515,7 +534,7 @@ a:focus, a:hover, .card.slick-slide {
     list-style: none;
     font-size: 15px;
     line-height: 40px;
-    color: black;
+    color: #434242;
     padding: 15px 55px;
   }
   .bespoke .main_div-l .card .card-block .product_card_ul li.product_li {
@@ -558,9 +577,10 @@ a:focus, a:hover, .card.slick-slide {
     padding: 30px 0;
   }
   .bespoke .main_div-r div {
+    width: 500px;
     font-weight: 300 !important;
     font-size: 15px;
-    color: black;
+    color: #434242;
     line-height: 25px;
   }
   .bespoke .main_div-r .product_ul {
@@ -587,12 +607,13 @@ a:focus, a:hover, .card.slick-slide {
     height: 460px;
     width: 700px;
     z-index: 999;
-    right: 250px;
+    right: 198px;
   }
   .bespoke .first .row .tab_first-content .header {
-    float: right;
+    width: inherit;
+    text-align: right;
     display: block;
-    color: black;
+    color: #434242;
     font-weight: 600;
     background: transparent;
   }
@@ -635,6 +656,9 @@ a:focus, a:hover, .card.slick-slide {
   }
   .bespoke .footer {
     padding-top: 60px;
+  }
+  .bespoke .footer .btn-circle-blue {
+    width: 180px;
   }
   .bespoke .sub-header .swipe-tabs {
     width: 100vw;
@@ -737,14 +761,14 @@ a:focus, a:hover, .card.slick-slide {
     margin: 0 100px;
   }
   .testimonial .feature_carousel .row.align-items-center {
-    padding: 0px 100px;
+    padding: 0px 115px;
   }
   .testimonial .main_div-r {
     font-weight: 300 !important;
     margin-top: 50px;
   }
   .testimonial .main_div-r .name {
-    color: black;
+    color: #434242;
     font-size: 18px;
   }
   .testimonial .main_div-r .title {
@@ -757,7 +781,7 @@ a:focus, a:hover, .card.slick-slide {
     font-weight: 300;
     margin-bottom: 30px;
     font-size: 15px;
-    color: black;
+    color: #434242;
     line-height: 25px;
   }
   .testimonial .main_div-r .footer.try {
@@ -769,7 +793,7 @@ a:focus, a:hover, .card.slick-slide {
     background-color: transparent;
   }
   .testimonial .main_div-r span.testimonial_seperator {
-    color: black;
+    color: #434242;
     margin: 0 15px;
   }
   .testimonial .main_div-r .play {
@@ -800,11 +824,11 @@ a:focus, a:hover, .card.slick-slide {
     margin: 65px auto;
   }
   .latest .title div {
-    font-weight: 200;
+    font-weight: 100;
     margin-top: 20px;
     font-size: 18px;
-    padding-left: 200px;
-    padding-right: 200px;
+    padding-left: 100px;
+    padding-right: 100px;
   }
   .latest .main_div-right .container {
     width: 100vw;
@@ -852,6 +876,9 @@ a:focus, a:hover, .card.slick-slide {
     padding: 10em 1em 1em 1em;
     opacity: 1;
   }
+  .latest .main_div-right .container .blocks .block__body a div {
+    font-weight: 200;
+  }
   .latest .slick-dotted.slick-slider {
     padding: 0;
     margin-bottom: 80px;
@@ -866,8 +893,8 @@ a:focus, a:hover, .card.slick-slide {
     font-weight: 200;
   }
   .service .title div {
-    color: black;
-    padding: 25px 150px;
+    color: #434242;
+    padding: 25px 100px;
     font-size: 18px;
     font-weight: 200;
   }
@@ -887,7 +914,7 @@ a:focus, a:hover, .card.slick-slide {
     margin-bottom: 0.75rem;
     color: #2980b9;
     font-size: 24px;
-    font-weight: 200;
+    font-weight: 300;
   }
   .news .card_carousel p {
     font-size: 15px;
@@ -907,25 +934,8 @@ a:focus, a:hover, .card.slick-slide {
   .news .card_carousel .card-block {
     padding: 1.5rem 2.5rem;
   }
-
-  #arrow-blue {
-    content: ">";
-    background-color: #2980b9;
-    text-align: center;
-    color: white;
-    padding-left: 0;
-    margin-left: 10px;
-    padding-bottom: 10px;
-    font-size: 10px;
-    width: 15px;
-    height: 15px;
-    line-height: 14px;
-    display: inline-block;
-    font-weight: 200;
-    border-radius: 50%;
-    position: relative;
-    transform: translateY(-15%);
-    top: 50%;
+  .news .card_carousel .slick-prev.slick-arrow, .news .card_carousel .slick-next.slick-arrow {
+    opacity: 0;
   }
 
   .contact {
@@ -942,7 +952,7 @@ a:focus, a:hover, .card.slick-slide {
   }
   .contact .footer_row-link span {
     font-size: 18px;
-    font-weight: 200;
+    font-weight: 100;
   }
   .contact .footer_row-link a {
     margin-top: 15px;
@@ -958,8 +968,7 @@ a:focus, a:hover, .card.slick-slide {
     font-size: 29px;
     font-weight: 100;
   }
-
-  #seperator {
+  .contact #seperator {
     display: block;
     background: url(../img/seperator.png) no-repeat 0 center;
     height: inherit;
@@ -975,7 +984,7 @@ a:focus, a:hover, .card.slick-slide {
     background-color: #333333;
   }
   .footer .footer_row-logo {
-    margin-bottom: 40px;
+    margin-bottom: 20px;
     padding-bottom: 5px;
     display: inline-block;
     width: 100%;
@@ -1012,7 +1021,7 @@ a:focus, a:hover, .card.slick-slide {
   }
   .footer .footer_row-link ul {
     padding: 0;
-    margin-top: 20px;
+    margin-top: 40px;
   }
   .footer .footer_row-link li {
     list-style: none;
@@ -1084,7 +1093,7 @@ a:focus, a:hover, .card.slick-slide {
 
   #conference-timeline .conference-center-line {
     position: absolute;
-    height: 71%;
+    height: 70%;
     top: 264px;
     left: 50.5%;
     margin-left: -2px;
@@ -1135,7 +1144,7 @@ a:focus, a:hover, .card.slick-slide {
 
   .timeline-article p {
     padding: 0;
-    font-weight: 400;
+    font-weight: 300;
     color: #434242;
     font-size: 15px;
     line-height: 24px;
@@ -1166,7 +1175,6 @@ a:focus, a:hover, .card.slick-slide {
     position: absolute;
     top: 20px;
     font-size: 23px;
-    font-family: "Open Sans";
     color: #fff;
   }
 
@@ -1249,6 +1257,12 @@ a:focus, a:hover, .card.slick-slide {
   /*===== // Vetical Timeline ===== */
   /*===== MOBILE Resonsive Vertical Timeline ===== */
   /* START: NAV */
+  .header {
+    position: absolute;
+    width: 100vw;
+    background: rgba(255, 255, 255, 0.8);
+    height: 60px;
+  }
   .header .btn.btn-circle-white {
     padding: 9px;
     margin: 0;
@@ -1261,7 +1275,7 @@ a:focus, a:hover, .card.slick-slide {
   .header .mega_left .mm-3column.fourth {
     background-color: #2980b8 !important;
     height: 425px;
-    width: 290px;
+    width: 25%;
     float: right;
   }
   .header .mega_left .mm-3column.fourth .categories-list ul {
@@ -1272,11 +1286,14 @@ a:focus, a:hover, .card.slick-slide {
     color: white;
     text-transform: lowercase;
     font-weight: 100;
-    line-height: 40px;
+    line-height: 35px;
     display: block;
+    font-size: 29px;
   }
-  .header .mega_left .mm-3column li {
-    transition: padding 0.5s ease;
+  .header .mega_left .mm-3column li a {
+    color: #2980b8;
+    font-weight: 300;
+    margin-bottom: 3px;
   }
   .header .mega_left .mm-3column ul {
     margin-top: 50px;
@@ -1291,11 +1308,23 @@ a:focus, a:hover, .card.slick-slide {
   }
   .header .mega_left .mm-3column a:hover .li_arrow {
     background: url(../img/mega-arrow_left.png) no-repeat 0 center;
+    background-size: 7px 9px;
     display: inline-block;
     width: 7px;
-    background-size: 7px 9px;
     height: 9px;
     margin-right: 5px;
+  }
+  .header .bm_logo_li {
+    float: left;
+    width: 60px;
+  }
+  .header .bm_logo_li img.bm_logo {
+    width: 60px;
+  }
+  .header #header_cup {
+    width: 40px;
+    height: 30px;
+    margin: 15px;
   }
   .header #cuppa {
     height: fit-content;
@@ -1303,8 +1332,25 @@ a:focus, a:hover, .card.slick-slide {
     margin-top: 13px;
     line-height: 18px;
   }
+  .header #cuppa_li {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
   .header #cuppa_li a {
     border: 0;
+  }
+  .header #cuppa_li a:hover {
+    text-decoration: none;
+  }
+  .header .subtitle {
+    font-size: 29px;
+    font-weight: 300;
+    color: #434242;
+    margin-bottom: 25px;
+  }
+  .header .header_title {
+    line-height: 50px;
   }
 
   .container:after,
@@ -1328,12 +1374,7 @@ a:focus, a:hover, .card.slick-slide {
     list-style: none;
     display: inline-block;
     color: #fff;
-    line-height: 53px;
     font-size: 14px;
-  }
-
-  .menu ul .drop-down {
-    line-height: 57px;
   }
 
   .menu ul li img {
@@ -1354,7 +1395,6 @@ a:focus, a:hover, .card.slick-slide {
     width: 161px;
     height: 60px;
   }
-
   .menu #cuppa_li a {
     color: white;
     line-height: 22px;
@@ -1367,7 +1407,6 @@ a:focus, a:hover, .card.slick-slide {
     color: #434242;
     display: block;
     margin-right: 35px;
-    font-weight: 300;
   }
 
   .menu > ul li a:hover {
@@ -1427,18 +1466,13 @@ a:focus, a:hover, .card.slick-slide {
 
   .mega-menu {
     background: none repeat scroll 0 0 white;
-    margin-top: -4px;
+    top: 56px;
     position: absolute;
     display: none;
     transition-duration: 0.9s;
     z-index: 999;
-    width: 67%;
+    width: 1200px;
     left: 300px;
-  }
-  .mega-menu .categories-list span {
-    color: #434242;
-    font-size: 29px;
-    font-weight: 300;
   }
 
   #menutoggle i {
@@ -1510,12 +1544,8 @@ a:focus, a:hover, .card.slick-slide {
 
   .categories-list li {
     display: block;
-    line-height: normal;
-    margin: 0;
     color: #2980b8;
     font-size: 14px;
-    padding: 5px 0;
-    font-weight: 300;
   }
 
   .categories-list li :hover {
@@ -1533,8 +1563,6 @@ a:focus, a:hover, .card.slick-slide {
   }
 
   .categories-list span {
-    font-size: 18px;
-    padding-bottom: 5px;
     text-transform: uppercase;
   }
 
@@ -1622,7 +1650,7 @@ a:focus, a:hover, .card.slick-slide {
 
   #product_list_lower {
     display: block;
-    padding-left: 50px;
+    padding-left: 90px;
   }
 
   .magento {
@@ -1715,10 +1743,14 @@ a:focus, a:hover, .card.slick-slide {
     padding-right: 155px;
   }
 
-  .container {
+  .bespoke .container {
     width: 1200px;
     padding: 0;
     margin: 0 auto;
+  }
+
+  footer .container {
+    width: 1200px;
   }
 }
 
