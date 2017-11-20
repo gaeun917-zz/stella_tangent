@@ -1,3 +1,5 @@
+*:focus
+  outline: 0
 
 *,
 *:before,
@@ -36,8 +38,6 @@ table
 /** * END: Eric Meyer's Reset CSS v2.0 (https://meyerweb.com/eric/tools/css/reset/) * http://cssreset.com */
 
 
-
-
 body
   font-family: 'Raleway', sans-serif
   width: 100%
@@ -65,7 +65,9 @@ p
 button:focus
   outline: 0
 
-a:focus, a:hover, .card.slick-slide
+a:focus,
+a:hover,
+.card.slick-slide
   color: white
   outline: 0 !important
 
@@ -93,7 +95,8 @@ a:focus, a:hover, .card.slick-slide
   border-radius: 0
   cursor: pointer
   line-height: 1.3rem
-
+  &:hover, &:focus
+    color: #fff
 
 .btn-circle-white
   background-color: white
@@ -107,14 +110,9 @@ a:focus, a:hover, .card.slick-slide
   line-height: 1.3rem
   margin: 0 auto
   display: block
-
-.btn-circle-white:hover, .btn-circle-white:focus
-  background-color: white
-  color: #2980b9
-
-.btn-circle-blue:hover
-  color: #fff
-
+  &:hover, &:focus
+    background-color: white
+    color: #2980b9
 
 .small_arrow_left
   position: absolute
@@ -133,56 +131,34 @@ a:focus, a:hover, .card.slick-slide
   margin-left: 25px
 
 //triangle
-.swipe-tab:after
-  content: ''
-  z-index: 1000
-  margin: 0 auto
-  display: inline-block
-  height: 0
-  border-left: 10px solid transparent
-  border-right: 10px solid transparent
-  border-top: 10px solid rgba(41, 128, 184, .5)
-  clear: both
-  top: 50px
-  position: absolute
+.bespoke
+  .swipe-tab:after
+    content: ''
+    z-index: 1000
+    margin: 0 auto
+    display: inline-block
+    height: 0
+    border-left: 10px solid transparent
+    border-right: 10px solid transparent
+    border-top: 10px solid rgba(41, 128, 184, .5)
+    clear: both
+    top: 50px
+    position: absolute
 
-//red arrow left
-//.learn_more:before
+//black arrow left
+//.magento a.read_more:before,
+//.product .main_div-right .footer:before
 //  content: " "
-//  background:  url(../img/icon/red_arrow.png) no-repeat
+//  background:  url(../img/icon/arrow_black_sm_left.png) no-repeat
 //  background-position: bottom
 //  display: inline-block
 //  width: 15px
 //  height: 15px
 
-//white arrow left
-//.platform_features
-//  .main_div-r
-//    .footer:before
-//      content: " "
-//      background:  url(../img/icon/arrow_sm_left_white.png) no-repeat
-//      background-position: bottom
-//      display: inline-block
-//      width: 15px
-//      height: 15px
-//      margin-right: 10px
-
-//black arrow left
-.magento a.read_more:before,
-.product .main_div-right .footer:before
-  content: " "
-  background:  url(../img/icon/arrow_black_sm_left.png) no-repeat
-  background-position: bottom
-  display: inline-block
-  width: 15px
-  height: 15px
-
 .bespoke
   .main_div-right
     .footer:before
       margin-right: 10px
-
-
 
 .bespoke
   .main_div-right
@@ -227,7 +203,8 @@ a:focus, a:hover, .card.slick-slide
   margin-bottom: 40px
 
 // slicker arrow
-.slick-prev.slick-arrow, .slick-next.slick-arrow
+.slick-prev.slick-arrow,
+.slick-next.slick-arrow
   //display: flex
   position: absolute
   bottom: 0
@@ -251,6 +228,7 @@ a:focus, a:hover, .card.slick-slide
   margin-left: 100px
 .slick-next.slick-arrow
   margin-right: 100px
+
 .slick-prev.slick-arrow:before
   content: ''
   background: url(../img/left_arrow-blue.png) no-repeat
@@ -288,52 +266,47 @@ a:focus, a:hover, .card.slick-slide
       opacity: 1
       color: white
 
-.impact_carousel
-  .slick-dots
-    li
-      button:before
-        color: rgb(177, 31, 55)
-        margin: 20px 0
-    li.slick-active
-      button:before
-        opacity: 1
-        color: rgb(177, 31, 55)
 
-.magento
-  .slick-dots
-    li
-      button:before
-        color: rgb(177, 31, 55)
-        margin: 38px 0
-    li.slick-active
-      button:before
-        opacity: 1
-        color: rgb(177, 31, 55)
+// START: dot indicator
 
-.platform_user
-  .slick-dots
-    li
-      button:before
-        color: rgb(177, 31, 55)
-        margin: 20px 0
-    li.slick-active
-      button:before
-        opacity: 1
-        color: rgb(177, 31, 55)
+//.impact_carousel
+//  .slick-dots
+//    li
+//      button:before
+//        color: rgb(177, 31, 55)
+//        margin: 20px 0
+//    li.slick-active
+//      button:before
+//        opacity: 1
+//        color: rgb(177, 31, 55)
+
+//.magento
+//  .slick-dots
+//    li
+//      button:before
+//        color: rgb(177, 31, 55)
+//        margin: 38px 0
+//    li.slick-active
+//      button:before
+//        opacity: 1
+//        color: rgb(177, 31, 55)
+
+//.platform_user
+//  .slick-dots
+//    li
+//      button:before
+//        color: rgb(177, 31, 55)
+//        margin: 20px 0
+//    li.slick-active
+//      button:before
+//        opacity: 1
+//        color: rgb(177, 31, 55)
 
 // END: dot indicator
 
 
 .card_carousel.slick-slider
   margin: 40px 0 80px 0
-
-.platform_user
-  .card_carousel.slick-slider
-    margin: 40px 0
-
-.platform_features
-  .slick-dotted.slick-slider
-    padding: 0
 
 .slick-list.draggable
   max-width: 1200px

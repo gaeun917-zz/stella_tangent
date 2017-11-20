@@ -1,5 +1,9 @@
 @charset "UTF-8";
 @import url("https://fonts.googleapis.com/css?family=Raleway:100,200,300,400,500,600,700");
+*:focus {
+  outline: 0;
+}
+
 *,
 *:before,
 *:after {
@@ -73,7 +77,9 @@ button:focus {
   outline: 0;
 }
 
-a:focus, a:hover, .card.slick-slide {
+a:focus,
+a:hover,
+.card.slick-slide {
   color: white;
   outline: 0 !important;
 }
@@ -94,6 +100,9 @@ a:focus, a:hover, .card.slick-slide {
   cursor: pointer;
   line-height: 1.3rem;
 }
+.btn-circle-blue:hover, .btn-circle-blue:focus {
+  color: #fff;
+}
 
 .btn-circle-white {
   background-color: white;
@@ -108,14 +117,9 @@ a:focus, a:hover, .card.slick-slide {
   margin: 0 auto;
   display: block;
 }
-
 .btn-circle-white:hover, .btn-circle-white:focus {
   background-color: white;
   color: #2980b9;
-}
-
-.btn-circle-blue:hover {
-  color: #fff;
 }
 
 .small_arrow_left {
@@ -136,7 +140,7 @@ a:focus, a:hover, .card.slick-slide {
   margin-left: 25px;
 }
 
-.swipe-tab:after {
+.bespoke .swipe-tab:after {
   content: "";
   z-index: 1000;
   margin: 0 auto;
@@ -148,16 +152,6 @@ a:focus, a:hover, .card.slick-slide {
   clear: both;
   top: 50px;
   position: absolute;
-}
-
-.magento a.read_more:before,
-.product .main_div-right .footer:before {
-  content: " ";
-  background: url(../img/icon/arrow_black_sm_left.png) no-repeat;
-  background-position: bottom;
-  display: inline-block;
-  width: 15px;
-  height: 15px;
 }
 
 .bespoke .main_div-right .footer:before {
@@ -204,7 +198,8 @@ a:focus, a:hover, .card.slick-slide {
   margin-bottom: 40px;
 }
 
-.slick-prev.slick-arrow, .slick-next.slick-arrow {
+.slick-prev.slick-arrow,
+.slick-next.slick-arrow {
   position: absolute;
   bottom: 0;
   display: -webkit-box;
@@ -271,43 +266,8 @@ a:focus, a:hover, .card.slick-slide {
   color: white;
 }
 
-.impact_carousel .slick-dots li button:before {
-  color: #b11f37;
-  margin: 20px 0;
-}
-.impact_carousel .slick-dots li.slick-active button:before {
-  opacity: 1;
-  color: #b11f37;
-}
-
-.magento .slick-dots li button:before {
-  color: #b11f37;
-  margin: 38px 0;
-}
-.magento .slick-dots li.slick-active button:before {
-  opacity: 1;
-  color: #b11f37;
-}
-
-.platform_user .slick-dots li button:before {
-  color: #b11f37;
-  margin: 20px 0;
-}
-.platform_user .slick-dots li.slick-active button:before {
-  opacity: 1;
-  color: #b11f37;
-}
-
 .card_carousel.slick-slider {
   margin: 40px 0 80px 0;
-}
-
-.platform_user .card_carousel.slick-slider {
-  margin: 40px 0;
-}
-
-.platform_features .slick-dotted.slick-slider {
-  padding: 0;
 }
 
 .slick-list.draggable {
@@ -316,20 +276,6 @@ a:focus, a:hover, .card.slick-slide {
 }
 
 @media screen and (min-width: 320px) {
-  *:focus {
-    outline: 0;
-  }
-
-  .header {
-    position: absolute;
-    width: 100vw;
-    background: rgba(255, 255, 255, 0.8);
-    height: 60px;
-  }
-  .header .menu ul {
-    height: 60px;
-  }
-
   .main_banner {
     background: linear-gradient(rgba(41, 128, 184, 0.25), rgba(41, 128, 184, 0.25)), url(../img/main-bg.png) no-repeat;
     background-size: cover;
@@ -482,12 +428,14 @@ a:focus, a:hover, .card.slick-slide {
     color: #2980b9;
   }
 
+  .bespoke .swipe-tab-content.second .main_div-l,
+  .bespoke .swipe-tab-content.third .main_div-l {
+    padding: 0 75px 0 25px;
+  }
+
   .bespoke {
     background-color: #e9f2f8;
     overflow-x: hidden;
-  }
-  .bespoke .main_div-l {
-    padding: 0 15px;
   }
   .bespoke .main_div-l .card {
     border-radius: 10px;
@@ -751,6 +699,11 @@ a:focus, a:hover, .card.slick-slide {
     height: 120px;
   }
 
+  .magento .container {
+    width: 1200px;
+    padding: 0;
+  }
+
   .testimonial {
     padding: 40px 0 0 0;
     overflow-x: hidden;
@@ -887,6 +840,7 @@ a:focus, a:hover, .card.slick-slide {
   .service {
     padding-top: 60px;
     padding-bottom: 60px;
+    background-color: white;
   }
   .service .title h2 {
     font-size: 36px;
@@ -936,6 +890,14 @@ a:focus, a:hover, .card.slick-slide {
   }
   .news .card_carousel .slick-prev.slick-arrow, .news .card_carousel .slick-next.slick-arrow {
     opacity: 0;
+  }
+  .news .card.first {
+    margin-left: 0;
+    margin-right: 25px;
+  }
+  .news .card.second {
+    margin-left: 25px;
+    margin-right: 0;
   }
 
   .contact {
@@ -1098,7 +1060,7 @@ a:focus, a:hover, .card.slick-slide {
     left: 50.5%;
     margin-left: -2px;
     border: 0.5px dotted gray;
-    z-index: -1;
+    z-index: 2;
   }
 
   .timeline-article {
@@ -1257,11 +1219,19 @@ a:focus, a:hover, .card.slick-slide {
   /*===== // Vetical Timeline ===== */
   /*===== MOBILE Resonsive Vertical Timeline ===== */
   /* START: NAV */
+  .header .menu ul {
+    height: 60px;
+  }
+  .header .swipe-tab:after {
+    display: none !important;
+  }
+
   .header {
     position: absolute;
     width: 100vw;
     background: rgba(255, 255, 255, 0.8);
     height: 60px;
+    z-index: 1000;
   }
   .header .btn.btn-circle-white {
     padding: 9px;
@@ -1350,7 +1320,7 @@ a:focus, a:hover, .card.slick-slide {
     margin-bottom: 25px;
   }
   .header .header_title {
-    line-height: 50px;
+    line-height: 55px;
   }
 
   .container:after,
@@ -1406,6 +1376,7 @@ a:focus, a:hover, .card.slick-slide {
     text-decoration: none;
     color: #434242;
     display: block;
+    font-weight: 300;
     margin-right: 35px;
   }
 
@@ -1466,13 +1437,13 @@ a:focus, a:hover, .card.slick-slide {
 
   .mega-menu {
     background: none repeat scroll 0 0 white;
-    top: 56px;
+    top: 60px;
     position: absolute;
     display: none;
     transition-duration: 0.9s;
     z-index: 999;
     width: 1200px;
-    left: 300px;
+    left: 305px;
   }
 
   #menutoggle i {
@@ -1648,11 +1619,6 @@ a:focus, a:hover, .card.slick-slide {
     display: none;
   }
 
-  #product_list_lower {
-    display: block;
-    padding-left: 90px;
-  }
-
   .magento {
     padding: 60px;
   }
@@ -1745,12 +1711,14 @@ a:focus, a:hover, .card.slick-slide {
 
   .bespoke .container {
     width: 1200px;
-    padding: 0;
+    padding: 0 50px;
     margin: 0 auto;
   }
 
   footer .container {
     width: 1200px;
+    padding: 0;
+    left: 25px;
   }
 }
 

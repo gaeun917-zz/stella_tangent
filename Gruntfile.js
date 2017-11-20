@@ -12,6 +12,16 @@
           }
         }
       },
+      autoprefixer: {
+        options: {
+          browsers: ['last 2 versions']
+        },
+        dist: {
+          files: {
+            'pub/css/styles.css': 'pub/css/styles.css'
+          }
+        }
+      },
       coffee: {
         compile: {
           expand: true,
@@ -26,6 +36,14 @@
         main: {
           src: ['src/js/compiled/*.js'],
           dest: 'pub/js/script.js'
+        },
+        vendor_js: {
+          src: ['bower_components/jquery/dist/jquery.js', 'bower_components/bootstrap/dist/js/bootstrap.js', 'bower_components/tether/dist/js/tether.min.js', 'bower_components/slick-carousel/slick/slick.min.js'],
+          dest: 'pub/js/vendor.js'
+        },
+        vendor_css: {
+          src: ['bower_components/bootstrap/dist/css/bootstrap.css', 'bower_components/bootstrap/dist/css/bootstrap-theme.min.css', 'bower_components/slick-carousel/slick/slick.css', 'bower_components/slick-carousel/slick/slick-theme.css'],
+          dest: 'pub/css/vendor.css'
         }
       },
       clean: {
@@ -106,9 +124,10 @@
     grunt.loadNpmTasks('grunt-contrib-sass');
     grunt.loadNpmTasks('grunt-contrib-uglify');
     grunt.loadNpmTasks('grunt-contrib-watch');
+    grunt.loadNpmTasks('grunt-autoprefixer');
     grunt.registerTask('basic', ['sass', 'concat', 'assemble']);
     grunt.registerTask('default', ['basic', 'watch']);
-    return grunt.registerTask('deploy', ['default', 'uglify']);
+    return grunt.registerTask('deploy', ['basic', 'autoprefixer', 'uglify']);
   };
 
 }).call(this);

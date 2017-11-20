@@ -12,6 +12,14 @@ module.exports = (grunt) ->
         files:
           'pub/css/styles.css': 'src/sass/manifest.sass'
 
+    autoprefixer:
+      options:
+        browsers: ['last 2 versions']
+      dist:
+        files:
+          'pub/css/styles.css':'pub/css/styles.css'
+
+
     # Compiles Coffee to JS
     coffee:
       compile:
@@ -27,24 +35,24 @@ module.exports = (grunt) ->
         src: ['src/js/compiled/*.js']
         dest: 'pub/js/script.js'
 
-#      vendor_js:
-#        src: [
-#          'bower_components/jquery/dist/jquery.js'
-#          'bower_components/bootstrap/dist/js/bootstrap.js'
-#          'bower_components/counterup/counterup.min.js'
-#          'bower_components/tether/dist/js/tether.min.js'
-#          'bower_components/slick-carousel/slick/slick.min.js'
-#        ]
-#        dest: 'pub/js/vendor.js'
-#
-#      vendor_css:
-#        src: [
-#          'bower_components/bootstrap/dist/css/bootstrap.css'
-#          'bower_components/bootstrap/dist/css/bootstrap-theme.min.css'
-#          'bower_components/slick-carousel/slick/slick.css'
-#          'bower_components/slick-carousel/slick/slick-theme.css'
-#        ]
-#        dest: 'pub/css/vendor.css'
+      vendor_js:
+        src: [
+          'bower_components/jquery/dist/jquery.js'
+          'bower_components/bootstrap/dist/js/bootstrap.js'
+          'bower_components/tether/dist/js/tether.min.js'
+          'bower_components/slick-carousel/slick/slick.min.js'
+          
+        ]
+        dest: 'pub/js/vendor.js'
+
+      vendor_css:
+        src: [
+          'bower_components/bootstrap/dist/css/bootstrap.css'
+          'bower_components/bootstrap/dist/css/bootstrap-theme.min.css'
+          'bower_components/slick-carousel/slick/slick.css'
+          'bower_components/slick-carousel/slick/slick-theme.css'
+        ]
+        dest: 'pub/css/vendor.css'
 
 
     # Clean out the pub folder
@@ -127,11 +135,12 @@ module.exports = (grunt) ->
   grunt.loadNpmTasks 'grunt-contrib-sass'  
   grunt.loadNpmTasks 'grunt-contrib-uglify'
   grunt.loadNpmTasks 'grunt-contrib-watch'
+  grunt.loadNpmTasks 'grunt-autoprefixer'
 
   # Default task(s).
   grunt.registerTask 'basic',   ['sass', 'concat', 'assemble']
-  grunt.registerTask 'default', ['basic', 'watch']
+  grunt.registerTask 'default', ['basic', 'watch' ]
 
   # Delpoy task(s).
-  grunt.registerTask 'deploy',  ['default', 'uglify']
+  grunt.registerTask 'deploy',  ['basic', 'autoprefixer', 'uglify']
 
