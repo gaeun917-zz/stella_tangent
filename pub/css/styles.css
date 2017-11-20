@@ -202,16 +202,10 @@ a:hover,
 .slick-next.slick-arrow {
   position: absolute;
   bottom: 0;
-  display: -webkit-box;
-  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-  -webkit-align-items: center;
   -ms-flex-align: center;
   align-items: center;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
   -ms-flex-pack: center;
   justify-content: center;
   width: 17%;
@@ -383,13 +377,12 @@ a:hover,
     width: 80px;
     height: 80px;
     margin: 0 auto;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: center;
+    -ms-flex-pack: center;
+        justify-content: center;
   }
   .top4 .top4_card .card-block img:hover {
-    -moz-transition: all 1s ease;
-    -webkit-transition: all 1s ease;
-    -o-transition: all 1s ease;
     transition: all 1s ease;
     transform: scale(1.1);
   }
@@ -441,8 +434,6 @@ a:hover,
     border-radius: 10px;
     margin-right: 0;
     margin-left: 0;
-    -webkit-box-shadow: 5px 5px 16px 2px rgba(41, 128, 184, 0.2);
-    -moz-box-shadow: 5px 5px 16px 2px rgba(41, 128, 184, 0.2);
     box-shadow: 5px 5px 16px 2px rgba(41, 128, 184, 0.2);
   }
   .bespoke .main_div-l .card .card-block {
@@ -637,9 +628,12 @@ a:hover,
 }
 @media screen and (min-width: 320px) {
   .bespoke .slick-initialized .swipe-tab {
+    display: -ms-flexbox;
     display: flex;
-    align-items: center;
-    justify-content: center;
+    -ms-flex-align: center;
+        align-items: center;
+    -ms-flex-pack: center;
+        justify-content: center;
     height: 50px;
     background: rgba(41, 128, 184, 0.5);
     border: 0;
@@ -683,8 +677,10 @@ a:hover,
     margin-bottom: 0;
   }
   .magento .magento_logo .col {
+    display: -ms-flexbox;
     display: flex;
-    justify-content: center;
+    -ms-flex-pack: center;
+        justify-content: center;
     margin-bottom: 25px;
   }
   .magento .magento_logo .col img {
@@ -1012,6 +1008,8 @@ a:hover,
   }
   .footer .footer_row-social a {
     display: inline-block;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
     height: fit-content;
   }
   .footer .footer_row-social img {
@@ -1297,6 +1295,8 @@ a:hover,
     margin: 15px;
   }
   .header #cuppa {
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
     height: fit-content;
     width: 58px;
     margin-top: 13px;
@@ -1368,6 +1368,7 @@ a:hover,
   .menu #cuppa_li a {
     color: white;
     line-height: 22px;
+    display: -ms-flexbox;
     display: flex;
   }
 
@@ -1553,19 +1554,8 @@ a:hover,
 
   /*Animation-- */
   .animated {
-    -webkit-animation-duration: 1s;
     animation-duration: 1s;
-    -webkit-animation-fill-mode: both;
     animation-fill-mode: both;
-  }
-
-  @-webkit-keyframes fadeIn {
-    0% {
-      opacity: 0;
-    }
-    100% {
-      opacity: 1;
-    }
   }
   @keyframes fadeIn {
     0% {
@@ -1576,7 +1566,6 @@ a:hover,
     }
   }
   .fadeIn {
-    -webkit-animation-name: fadeIn;
     animation-name: fadeIn;
   }
 
@@ -1600,7 +1589,6 @@ a:hover,
   .bespoke .container .row .main_div-r .card.first {
     left: 10px;
     display: -ms-flexbox;
-    display: -webkit-flex;
     display: flex;
   }
   .bespoke .container .row .main_div-r .btn-circle-red {
@@ -1669,8 +1657,10 @@ a:hover,
     margin: 0 auto;
   }
   .latest .container .main_div-l .container .blocks {
+    display: -ms-flexbox;
     display: flex;
-    flex-flow: row nowrap;
+    -ms-flex-flow: row nowrap;
+        flex-flow: row nowrap;
   }
   .latest .container .main_div-l .container .blocks .block__body {
     width: 100%;
@@ -1694,6 +1684,7 @@ a:hover,
   }
 
   .footer .footer_row-link {
+    display: -ms-flexbox;
     display: flex;
   }
   .footer .footer_row-link a {
@@ -1721,5 +1712,3 @@ a:hover,
     left: 25px;
   }
 }
-
-/*# sourceMappingURL=styles.css.map */
