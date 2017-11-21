@@ -1,3 +1,28 @@
+.header
+  .mega-menu
+    display: none
+  .xs-menu li a
+    padding: 0
+  .xs-menu-cont
+    display: block
+  #cuppa_li
+    display: none
+  li.drop-down
+    a.header_title:hover
+      color: #2980b9
+      text-decoration: none
+
+  .mega-menu.display-on
+    display: block
+    //triangle
+  .bespoke
+    .swipe-tab:after
+      display: none
+
+
+
+
+
 .main_banner
   background: linear-gradient(rgba(41, 128, 184, 0.25), rgba(41, 128, 184, 0.25)), url(../img/main-bg.png) no-repeat
   background-size: cover
@@ -13,8 +38,10 @@
     .main_div-l
       position: relative
       background-color: #2980b9
-      top: -240px
-      left: 320px
+      top: -300px
+      left: 50px
+      //top: -240px
+      //left: 320px
       height: 343px
       width: 333px
       padding: 0
@@ -38,7 +65,7 @@
         margin-right: 40px
         font-weight: 200
     .square
-      margin-top: 50px
+      margin-top: -30px
       display: block
       width: 0
       height: 0
@@ -59,7 +86,6 @@
         font-size: 16px
         padding: 20px 0
         color: white
-
   .go_down
     margin: 0 auto
     width: 50px
@@ -70,80 +96,62 @@
     transition: top .5s ease
 
 
-
-
-
-
-
 .top4
   padding-top: 40px
   padding-bottom: 40px
+  padding-left: 15px
+  padding-right: 15px
   font-weight: 300
   overflow-x: hidden
-  .top4_title
-    padding-bottom: 40px
-    h1
-      font-weight: 200
-      font-size: 32px
-  .top4_card
-    margin: 0 auto
-    .card-block
-      border: 0
-      box-shadow: none
-      color: #434242
-      margin: 0
-      padding: 0
-      .img_box
-        width: 80px
-        height: 80px
-        margin: 0 auto
-        display: flex
-        justify-content: center
-      img:hover
-        -moz-transition: all 1s ease
-        -webkit-transition: all 1s ease
-        -o-transition: all 1s ease
-        transition: all 1s ease
-        transform: scale(1.1)
-      img.top-business
-        width: 65px
-        height: 80px
-        //margin: 10px auto
-      img.top-tech
-        width: 80px
-        height: 80px
-        //margin: 20px auto
-      img.top-track
-        width: 80px
-        height: 80px
-        //margin: 20px auto
-      img.top-best
-        width: 80px
-        height: 80px
-      h5
-        padding: 20px 0
+  .top4_container
+    .top4_title
+      padding-bottom: 40px
+      padding-left: 15px
+      h1
         font-weight: 200
-        font-size: 21px
-        letter-spacing: .5px
-    .card
-      width: 25%
-.top4
-  .container
-    width: 1200px
-    padding: 0
-
-
-
-a:hover
-  color: #2980b9
+        font-size: 32px
+    .top4_card
+      margin: 0 auto
+      .card-block
+        border: 0
+        box-shadow: none
+        color: #434242
+        margin: 0
+        padding: 0
+        .img_box
+          width: 80px
+          height: 80px
+          margin: 0 auto
+          display: flex
+          justify-content: center
+        img:hover
+          -moz-transition: all 1s ease
+          -webkit-transition: all 1s ease
+          -o-transition: all 1s ease
+          transition: all 1s ease
+          transform: scale(1.1)
+        img.top-business
+          width: 65px
+          height: 80px
+        img.top-tech
+          width: 80px
+          height: 80px
+        img.top-track
+          width: 80px
+          height: 80px
+        img.top-best
+          width: 80px
+          height: 80px
+        h5
+          padding: 20px 0
+          font-weight: 200
+          font-size: 21px
+          letter-spacing: .5px
+      .card
+        width: 25%
 
 $swipe-tab-color: #757575
 $swipe-active-tab-color: #000
-
-.bespoke
-  .swipe-tab-content.second .main_div-l,
-  .swipe-tab-content.third .main_div-l
-    padding: 0 75px 0 25px
 
 .bespoke
   background-color: #e9f2f8
@@ -218,11 +226,11 @@ $swipe-active-tab-color: #000
       font-weight: 400
     h2
       font-weight: 300
-      width: 500px
+      //width: 500px
       font-size: 30px
       padding: 30px 0
     div
-      width: 500px
+      //width: 500px
       font-weight: 300 !important
       font-size: 15px
       color: #434242
@@ -241,61 +249,61 @@ $swipe-active-tab-color: #000
       background-color: transparent
       color: #2980b9
 
-  .first
+  .swipe-tab-content.first
     .row
-      .tab_first-content
-        position: absolute
-        display: block
-        top: 75px
-        height: 460px
-        width: 700px
-        z-index: 999
-        right: 198px
-        .header
-          width: inherit
-          text-align: right
+      .main_div-l
+        .tab_first-content
+          position: absolute
           display: block
-          color: #434242
-          font-weight: 600
-          background: transparent
-        .tab_first-text
-          display: inline-block
-          position: absolute
-          top: 50px
-          text-align: right
-          font-size: 26px
-          font-weight: 300
-        .tab_first-num
-          float: right
-          position: absolute
-          top: 200px
-          right: 0
-          .digit
-            font-size: 336px
-            line-height: 100px
-            font-weight: 800
-          .percent
-            font-size: 35px
+          //top: 75px
+          top: 4%
+          height: 460px
+          width: 100vw
+          max-width: 600px
+          //width: 700px
+          z-index: 999
+          right: 198px
+          .header
+            width: inherit
+            text-align: right
+            display: block
+            color: #434242
+            font-weight: 600
+            background: transparent
+          .tab_first-text
+            display: inline-block
+            position: absolute
+            top: 50px
+            text-align: right
+            font-size: 26px
+            font-weight: 300
+          .tab_first-num
             float: right
             position: absolute
-            vertical-align: top
-            top: -33px
+            top: 200px
             right: 0
-            font-weight: 300
-            margin-left: 20px
-    #product_list_lower
-      padding-left: 30px
-      padding-right: 400px
-      height: 587px
-  .second
-    #product_list_lower
+            .digit
+              font-size: 336px
+              line-height: 100px
+              font-weight: 800
+            .percent
+              font-size: 35px
+              float: right
+              position: absolute
+              vertical-align: top
+              top: -33px
+              right: 0
+              font-weight: 300
+              margin-left: 20px
+      .main_div-r#product_list_lower
+        height: 587px
+  .swipe-tab-content.second
+    .main_div-r#product_list_lower
       height: 572px
-  .footer
-    padding-top: 60px
-    .btn-circle-blue
-      width: 180px
-
-
+      .footer
+        padding-top: 60px
+        .btn-circle-blue
+          width: 180px
 
   .sub-header
     .swipe-tabs
@@ -307,14 +315,7 @@ $swipe-active-tab-color: #000
       .slick-list.draggable
         max-width: 100vw
       .swipe-tab
-        width: 33.33% !important
-
-
-
-
-
-
-
+        width: 100% !important
 
   //tab
   .slick-track
@@ -323,10 +324,8 @@ $swipe-active-tab-color: #000
     .swipe-tab-content
       position: relative
       min-height: 365px
-
       @media screen and (min-width: 767px)
         min-height: 500px
-
     .swipe-tab
       display: flex
       align-items: center
@@ -341,27 +340,27 @@ $swipe-active-tab-color: #000
       transition: all 0.5s
       font-size: 18px
       font-weight: 300
-      &:hover
+      &:hover,
       &.active-tab
         background-color: rgba(41, 128, 184, 1)
         color: white
-        //font-weight: bold
       &.active-tab.swipe-tab:after
-        //background-color: rgba(41, 128, 184, 1)
         border-left: 10px solid transparent
         border-right: 10px solid transparent
         border-top: 10px solid rgba(41, 128, 184, 1)
 
 
-
 .magento
   background-color: #f6f7f9
-  padding: 40px 0
+  padding: 40px 15px
   overflow-x: hidden
+  .container
+    //width: 100vw
+    padding: 0
   h1
     font-weight: 200
   .magento_p
-    padding: 0 150px
+    padding: 0 15px
     font-weight: 200
     font-size: 18px
     margin-top: 20px
@@ -384,10 +383,6 @@ $swipe-active-tab-color: #000
         width: 60px
         height: 120px
 
-.magento
-  .container
-    width: 1200px
-    padding: 0
 
 
 .testimonial
@@ -395,10 +390,6 @@ $swipe-active-tab-color: #000
   overflow-x: hidden
   color: #2980b9
   background: #e9f2f8 no-repeat
-  .feature_carousel
-    margin: 0 100px
-    .row.align-items-center
-      padding: 0px 115px
   .main_div-r
     font-weight: 300 !important
     margin-top: 50px
@@ -434,14 +425,10 @@ $swipe-active-tab-color: #000
       position: relative
       transform: translateY(35%)
       top: 50%
-
   .main_div-l
     display: none
     img
       max-width: 480px
-
-
-
 
 
 .latest
@@ -456,8 +443,6 @@ $swipe-active-tab-color: #000
       font-weight: 100
       margin-top: 20px
       font-size: 18px
-      padding-left: 100px
-      padding-right: 100px
   .main_div-right
     .container
       width: 100vw
@@ -508,7 +493,6 @@ $swipe-active-tab-color: #000
     margin-bottom: 80px
 
 
-
 .service
   padding-top: 60px
   padding-bottom: 60px
@@ -519,14 +503,22 @@ $swipe-active-tab-color: #000
       font-weight: 200
     div
       color: #434242
-      padding: 25px 100px
       font-size: 18px
       font-weight: 200
   .service_title
     font-size: 24px
     font-weight: 300
-
-
+  #conference-timeline
+    .conference-center-line
+      display: none
+  .timeline-article
+    .meta-date
+      display: none
+    /* MOBILE Resonsive Vertical Timeline =*/
+    p
+      margin: 0
+      span.article-number
+        display: none
 
 .news
   background-color: #e9f2f8
@@ -556,15 +548,16 @@ $swipe-active-tab-color: #000
     .slick-prev.slick-arrow, .slick-next.slick-arrow
       opacity: 0
   .card.first
-    margin-left: 0
-    margin-right: 25px
+    margin-left: 5px
+    margin-right: 5px
   .card.second
-    margin-left: 25px
-    margin-right: 0
+    margin-left: 5px
+    margin-right: 5px
+
 
 .contact
   background-color: #2980b9
-  padding: 40px 0
+  padding: 40px 15px
   overflow-x: hidden
   color: white
   .top4_title
@@ -579,7 +572,8 @@ $swipe-active-tab-color: #000
       margin-top: 15px
       margin-bottom: 15px
     .meeting, .call
-      margin-right: 40px
+      width: 100%
+      margin-bottom: 20px
     .meeting
       a
         width: 130px
@@ -588,14 +582,12 @@ $swipe-active-tab-color: #000
         font-size: 29px
         font-weight: 100
   #seperator
-    display: block
+    display: none
     background: url(../img/seperator.png) no-repeat 0 center
     height: inherit
     line-height: 48px
     width: 3px
     padding-right: 30px
-
-
 
 
 .footer
@@ -677,468 +669,3 @@ $swipe-active-tab-color: #000
       height: 29px
     img#ogone
       height: 25px
-
-
-
-
-
-
-
-// START: timeline
-
-#conference-timeline .timeline-start,
-#conference-timeline .timeline-end
-  display: table
-  font-family: "Roboto", sans-serif
-  font-size: 18px
-  font-weight: 900
-  text-transform: uppercase
-  background: #00b0bd
-  padding: 15px 23px
-  color: #fff
-  max-width: 5%
-  width: 100%
-  text-align: center
-  margin: 0 auto
-
-#conference-timeline .conference-center-line
-  position: absolute
-  height: 70%
-  top: 264px
-  left: 50.5%
-  margin-left: -2px
-  border: .5px dotted gray
-  z-index: 2
-
-.timeline-article
-  width: 100%
-  height: 100%
-  position: relative
-  overflow: hidden
-  margin: 20px 0
-
-.timeline-article .content-left-container,
-.timeline-article .content-right-container
-  max-width: 44%
-  width: 100%
-
-.timeline-article .timeline-author
-  display: block
-  font-weight: 400
-  font-size: 14px
-  line-height: 24px
-  color: #434242
-  text-align: right
-
-.timeline-article .content-left,
-.timeline-article .content-right
-  position: relative
-  width: auto
-  background-color: #fff
-  padding: 27px 60px
-
-.timeline-article .content-left
-  text-align: -webkit-right
-  text-align: right
-
-.timeline-article .content-right
-  text-align: -webkit-left
-  text-align: left
-
-.timeline-article p
-  padding: 0
-  font-weight: 300
-  color: #434242
-  font-size: 15px
-  line-height: 24px
-  position: relative
-  margin-top: 20px
-  margin-bottom: 20px
-
-.timeline-article p span.article-number
-  position: absolute
-  font-weight: 300
-  font-size: 44px
-  top: 10px
-  left: -60px
-  color: #00b0bd
-
-.timeline-article .content-left-container
-  float: left
-
-.timeline-article .content-right-container
-  float: right
-
-.timeline-article .content-left:before,
-.timeline-article .content-right:before
-  position: absolute
-  top: 20px
-  font-size: 23px
-  color: #fff
-
-.timeline-article .content-left:before
-  content: "\f0da"
-  right: -8px
-
-.timeline-article .content-right:before
-  content: "\f0d9"
-  left: -8px
-
-.timeline-article .meta-date
-  position: absolute
-  top: 190px
-  left: 51%
-  width: 50px
-  height: 50px
-  margin-left: -31px
-  border-radius: 100%
-
-.meta-date.img1
-  top: 32px
-  background: url(../img/service-brain.png) no-repeat 0 center
-  background-size: 50px
-
-.meta-date.img2
-  top: 247px
-  background: url(../img/service-pen.png) no-repeat 0 center
-  background-size: 50px
-
-.meta-date.img3
-  top: 150px
-  background: url(../img/service-link.png) no-repeat 0 center
-  background-size: 50px
-
-.meta-date.img4
-  top: 30px
-  background: url(../img/service-rocket.png) no-repeat 0 center
-  background-size: 50px
-
-.meta-date.img5
-  top: 240px
-  background: url(../img/service-screen.png) no-repeat 0 center
-  background-size: 50px
-
-.timeline-article .meta-date .date,
-.timeline-article .meta-date .month
-  display: block
-  text-align: center
-  font-weight: 900
-
-.timeline-article .meta-date .date
-  font-size: 30px
-  line-height: 40px
-
-.timeline-article .meta-date .month
-  font-size: 18px
-  line-height: 10px
-
-//  custom
-.service-bottom
-  text-decoration: none !important
-  font-size: 14px
-
-.service-bottom:hover
-  color: #2980b9
-
-
-
-/*===== // Vetical Timeline =====*/
-
-/*===== MOBILE Resonsive Vertical Timeline =====*/
-//@media only screen and (max-width: 830px) {
-//#conference-timeline .timeline-start,
-//#conference-timeline .timeline-end {
-//  margin: 0;
-//}
-//#conference-timeline .conference-center-line {
-//  margin-left: 0;
-//  left: 50px;
-//}
-//.timeline-article .meta-date {
-//  margin-left: 0;
-//  left: 20px;
-//}
-//.timeline-article .content-left-container,
-//.timeline-article .content-right-container {
-//  max-width: 100%;
-//  width: auto;
-//  float: none;
-//  margin-left: 110px;
-//  min-height: 53px;
-//}
-//.timeline-article .content-left-container {
-//  margin-bottom: 20px;
-//}
-//.timeline-article .content-left,
-//.timeline-article .content-right {
-//  padding: 10px 25px;
-//  min-height: 65px;
-//}
-//.timeline-article .content-left:before {
-//  content: "\f0d9";
-//  right: auto;
-//  left: -8px;
-//}
-//.timeline-article .content-right:before {
-//  display: none;
-//}
-//}
-
-//@media only screen and (max-width: 400px) {
-//.timeline-article p {
-//  margin: 0;
-//}
-//.timeline-article p span.article-number {
-//  display: none;
-//}
-//}
-
-// END: timeline
-
-
-
-
-
-
-/* START: NAV */
-
-// MOBILE responsive upside down
-//.menu
-//  display: none
-//
-//.xs-menu li a
-//  padding: 0px
-//
-//.xs-menu-cont
-//  display: block
-
-.header
-  .menu
-    ul
-      height: 60px
-  .swipe-tab:after
-    display: none !important
-
-
-
-
-
-
-
-.header
-  position: absolute
-  width: 100vw
-  background: rgba(255,255,255,.8)
-  height: 60px
-  z-index: 1000
-  .btn.btn-circle-white
-    padding: 9px
-    margin: 0
-    color: #2980b9
-    width: 180px
-    border: 0
-    margin-top: 70px
-    border-bottom: 1px solid #2980b8
-  .mega_left
-    .mm-3column.fourth
-      background-color: #2980b8 !important
-      height: 425px
-      width: 25%
-      float: right
-      .categories-list
-        ul
-          padding: 0 40px
-          font-weight: 100
-          span
-            color: white
-            text-transform: lowercase
-            font-weight: 100
-            line-height: 35px
-            display: block
-            font-size: 29px
-  .mega_left
-    .mm-3column
-      li a
-        color: #2980b8
-        font-weight: 300
-        margin-bottom: 3px
-  .mega_left
-    .mm-3column
-      ul
-        margin-top: 50px
-      .ul_first
-        margin-left: 50px
-      a:hover
-        padding-left: 10px
-        border-bottom: 0
-        color: #434242
-        .li_arrow
-          background: url(../img/mega-arrow_left.png) no-repeat 0 center
-          background-size: 7px 9px
-          display: inline-block
-          width: 7px
-          height: 9px
-          margin-right: 5px
-  .bm_logo_li
-    float: left
-    width: 60px
-    img.bm_logo
-      width: 60px
-
-  #header_cup
-    width: 40px
-    height: 30px
-    margin: 15px
-
-  #cuppa
-    height: fit-content
-    width: 58px
-    margin-top: 13px
-    line-height: 18px
-  #cuppa_li
-    position: absolute
-
-    right: 0
-    top: 0
-    a
-      border: 0
-    a:hover
-      text-decoration: none
-  .subtitle
-    font-size: 29px
-    font-weight: 300
-    color: #434242
-    margin-bottom: 25px
-
-  .header_title
-    line-height: 55px
-.container:after,
-.container:before
-  content: ""
-  clear: both
-
-nav.menu
-  background: transparent
-  position: relative
-  min-height: 45px
-  height: 60px
-
-.menu ul .bm_logo_li
-  float: left
-
-.menu > ul > li
-  list-style: none
-  display: inline-block
-  color: #fff
-  font-size: 14px
-
-.menu ul li img
-  width: 60px
-  height: 80px
-  float: left
-.menu ul li #header_cup
-  width: 40px
-  height: 30px
-  margin: 15px
-
-.menu #cuppa_li
-  background-color: #2980b8
-  float: right
-  width: 161px
-  height: 60px
-  a
-    color: white
-    line-height: 22px
-    display: flex
-
-.menu > ul li a,
-.xs-menu li a
-  text-decoration: none
-  color: #434242
-  display: block
-  font-weight: 300
-  margin-right: 35px
-
-
-.menu > ul li a:hover
-  border-bottom: 5px solid #2980b8
-  color: #2980b8
-  z-index: 1000
-  transition-duration: 0.3s
-  -moz-transition-duration: 0.3s
-  -webkit-transition-duration: 0.3s
-
-.mega-menu > ul li a:hover
-  border-bottom: 0
-
-.mega-menu
-  z-index: 999
-  width: 70%
-  height: 425px
-  left: 200px
-  text-align: left
-
-.displaynone
-  display: none
-
-.xs-menu-cont
-  display: none
-
-.xs-menu-cont > a
-  background: none repeat scroll 0 0 #2980b8
-  border-radius: 3px
-  padding: 3px 6px
-  display: block
-  border-bottom: 1px solid #E67248
-  box-shadow: 0 1px 2px #e67248
-  -webkit-box-shadow: 0 1px 2px #e67248
-  -moz-box-shadow: 0 1px 2px #e67248
-
-.xs-menu-cont > a:hover
-  cursor: pointer
-
-.xs-menu li
-  color: #fff
-  padding: 14px 30px
-  border-bottom: 1px solid #ccc
-  background: #2980b8
-
-.xs-menu a
-  text-decoration: none
-
-.mega-menu
-  background: none repeat scroll 0 0 white
-  top: 60px
-  position: absolute
-  display: none
-  transition-duration: 0.9s
-  z-index: 999
-  width: 1200px
-  left: 305px
-
-#menutoggle i
-  color: #fff
-  font-size: 33px
-  margin: 0
-  padding: 0
-
-.header_arrow
-  background: url(../img/header-down_arrow.png) no-repeat 0 center
-  display: inline-block
-  width: 15px
-  margin-left: 2px
-  background-size: 12px 8px
-  height: 10px
-  transition: background .5s ease
-
-.header_arrow.display-on
-  background: url(../img/header-up_arrow.png) no-repeat 0 center
-  display: inline-block
-  width: 15px
-  margin-left: 2px
-  background-size: 12px 8px
-  height: 10px
-  transition: background .5s ease
-
-
-/* END: NAV */

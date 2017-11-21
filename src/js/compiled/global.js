@@ -18,9 +18,7 @@
 //         });
 // });
 
-// dropdown
-
-
+// scrollmagic panel slide
 // scene swipe
 // var controller = new ScrollMagic.Controller({
 //     globalSceneOptions: {
@@ -96,8 +94,7 @@ $(document).ready(function () {
         $('.header_arrow.soft').toggleClass("display-on");
     });
 
-    //FRONT -----------------------------------------------------------------------
-    // scroll down button
+    // FRONT: scroll down blue button  -----------------------------------------------------------------------
     $(function () {
         $('a.go_down[href*=#]').on('click', function (e) {
             e.preventDefault();
@@ -105,9 +102,7 @@ $(document).ready(function () {
         });
     });
 
-
-    // BESPOKE ---------------------------------------------------------------------
-    // tab control
+    // BESPOKE : tab control---------------------------------------------------------------------
     var $swipeTabsContainer = $('.swipe-tabs'),
         $swipeTabs = $('.swipe-tab'),
         $swipeTabsContentContainer = $('.swipe-tabs-container'),
@@ -115,12 +110,12 @@ $(document).ready(function () {
         activeTabClassName = 'active-tab';
 
     $swipeTabsContainer.on('init', function(event, slick) {
-        $swipeTabsContentContainer.removeClass('invisible');
-        $swipeTabsContainer.removeClass('invisible');
+            $swipeTabsContentContainer.removeClass('invisible');
+            $swipeTabsContainer.removeClass('invisible');
 
-        currentIndex = slick.getCurrent();
-        $swipeTabs.removeClass(activeTabClassName);
-        $('.swipe-tab[data-slick-index=' + currentIndex + ']').addClass(activeTabClassName);
+            currentIndex = slick.getCurrent();
+            $swipeTabs.removeClass(activeTabClassName);
+            $('.swipe-tab[data-slick-index=' + currentIndex + ']').addClass(activeTabClassName);
     });
 
     $swipeTabsContainer.slick({
@@ -132,7 +127,6 @@ $(document).ready(function () {
         swipeToSlide: true,
         touchThreshold: 10
     });
-
     $swipeTabsContentContainer.slick({
         asNavFor: $swipeTabsContainer,
         slidesToShow: 1,
@@ -143,7 +137,6 @@ $(document).ready(function () {
         draggable: false,
         touchThreshold: 10
     });
-
 
     $swipeTabs.on('click', function(event) {
         // gets index of clicked tab
@@ -162,173 +155,202 @@ $(document).ready(function () {
     });
 
 
+    //SERVICE : vertical timeline -----------------------------------------------------------------------
+    window.sr = ScrollReveal();
 
-});
+    if ($(window).width() < 768) {
 
-
-// Carousel //------------------------------------------------------------------------
-// platform, news
-$('.card_carousel').slick({
-    dots: false,
-    infinite: true,
-    cssEase: 'linear',
-    speed: 300,
-    slidesToShow: 2,
-    slidesToScroll: 1,
-    responsive: [
-        {
-            breakpoint: 1024,
-            settings: {
-                dots: true,
-                arrows: false,
-                slidesToShow: 2,
-                slidesToScroll: 1
-            }
-        },
-        {
-            breakpoint: 800,
-            settings: {
-                dots: true,
-                arrows: false,
-                slidesToShow: 1,
-                slidesToScroll: 1
-            }
-        },
-        {
-            breakpoint: 480,
-            settings: {
-                dots: true,
-                arrows: false,
-                slidesToShow: 1,
-                slidesToScroll: 1
-            }
+        if ($('.timeline-content').hasClass('js--fadeInLeft')) {
+            $('.timeline-content').removeClass('js--fadeInLeft').addClass('js--fadeInRight');
         }
-    ]
+        sr.reveal('.js--fadeInRight', {
+            origin: 'right',
+            distance: '300px',
+            easing: 'ease-in-out',
+            duration: 800
+        });
+
+    } else {
+        sr.reveal('.js--fadeInLeft', {
+            origin: 'left',
+            distance: '300px',
+            easing: 'ease-in-out',
+            duration: 800
+        });
+        sr.reveal('.js--fadeInRight', {
+            origin: 'right',
+            distance: '300px',
+            easing: 'ease-in-out',
+            duration: 800
+        });
+    }
+    sr.reveal('.js--fadeInLeft', {
+        origin: 'left',
+        distance: '300px',
+        easing: 'ease-in-out',
+        duration: 800
+    });
+    sr.reveal('.js--fadeInRight', {
+        origin: 'right',
+        distance: '300px',
+        easing: 'ease-in-out',
+        duration: 800
+    });
+
+    // CAROUSEL ------------------------------------------------------------------------
+    $('.card_carousel').slick({
+        dots: false,
+        infinite: true,
+        cssEase: 'linear',
+        speed: 300,
+        slidesToShow: 2,
+        slidesToScroll: 1,
+        responsive: [
+            {
+                breakpoint: 1024,
+                settings: {
+                    dots: true,
+                    arrows: false,
+                    slidesToShow: 2,
+                    slidesToScroll: 1
+                }
+            },
+            {
+                breakpoint: 800,
+                settings: {
+                    dots: true,
+                    arrows: false,
+                    slidesToShow: 1,
+                    slidesToScroll: 1
+                }
+            },
+            {
+                breakpoint: 480,
+                settings: {
+                    dots: true,
+                    arrows: false,
+                    slidesToShow: 1,
+                    slidesToScroll: 1
+                }
+            }
+        ]
+    });
+
+    $('.top4_carousel').slick({
+        dots: false,
+        arrows: false,
+        infinite: true,
+        cssEase: 'linear',
+        speed: 300,
+        slidesToShow: 4,
+        slidesToScroll: 1,
+        responsive: [
+            {
+                breakpoint: 1024,
+                settings: {
+                    dots: true,
+                    arrows: false,
+                    slidesToShow: 2,
+                    slidesToScroll: 1
+                }
+            },
+            {
+                breakpoint: 800,
+                settings: {
+                    dots: true,
+                    arrows: false,
+                    slidesToShow: 1,
+                    slidesToScroll: 1
+                }
+            },
+            {
+                breakpoint: 480,
+                settings: {
+                    dots: true,
+                    arrows: false,
+                    slidesToShow: 1,
+                    slidesToScroll: 1
+                }
+            }
+        ]
+    });
+    $('.product_carousel').slick({
+        dots: false,
+        arrows: false,
+        cssEase: 'linear',
+        speed: 300,
+        slidesToShow: 4,
+        responsive: [
+            {
+                breakpoint: 1024,
+                settings: {
+                    infinite: false,
+                    dots: true,
+                    arrows: false,
+                    slidesToShow: 1,
+                    slidesToScroll: 1
+                }
+            },
+            {
+                breakpoint: 800,
+                settings: {
+                    dots: true,
+                    arrows: false,
+                    slidesToShow: 1,
+                    slidesToScroll: 1
+                }
+            },
+            {
+                breakpoint: 480,
+                settings: {
+                    dots: true,
+                    arrows: false,
+                    slidesToShow: 1,
+                    slidesToScroll: 1
+                }
+            }
+        ]
+    });
+    $('.testimonial_carousel').slick({
+        dots: false,
+        arrows: true,
+        infinite: true,
+        cssEase: 'linear',
+        speed: 300,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        responsive: [
+            {
+                breakpoint: 1024,
+                settings: {
+                    dots: true,
+                    arrows: false,
+                    slidesToShow: 1,
+                    slidesToScroll: 1
+                }
+            },
+            {
+                breakpoint: 800,
+                settings: {
+                    dots: true,
+                    arrows: false,
+                    slidesToShow: 1,
+                    slidesToScroll: 1
+                }
+            },
+            {
+                breakpoint: 480,
+                settings: {
+                    dots: true,
+                    arrows: false,
+                    slidesToShow: 1,
+                    slidesToScroll: 1
+                }
+            }
+        ]
+    });
+
 });
-
-// impact, investing
-$('.impact_carousel').slick({
-    dots: false,
-    arrows: false,
-    infinite: true,
-    cssEase: 'linear',
-    speed: 300,
-    slidesToShow: 4,
-    slidesToScroll: 1,
-    responsive: [
-        {
-            breakpoint: 1024,
-            settings: {
-                dots: true,
-                arrows: false,
-                slidesToShow: 2,
-                slidesToScroll: 1
-            }
-        },
-        {
-            breakpoint: 800,
-            settings: {
-                dots: true,
-                arrows: false,
-                slidesToShow: 1,
-                slidesToScroll: 1
-            }
-        },
-        {
-            breakpoint: 480,
-            settings: {
-                dots: true,
-                arrows: false,
-                slidesToShow: 1,
-                slidesToScroll: 1
-            }
-        }
-    ]
-});
-
-
-// product, partners
-$('.product_carousel').slick({
-    dots: false,
-    arrows: false,
-    cssEase: 'linear',
-    speed: 300,
-    slidesToShow: 4,
-    responsive: [
-        {
-            breakpoint: 1024,
-            settings: {
-                infinite: false,
-                dots: true,
-                arrows: false,
-                slidesToShow: 1,
-                slidesToScroll: 1
-            }
-        },
-        {
-            breakpoint: 800,
-            settings: {
-                dots: true,
-                arrows: false,
-                slidesToShow: 1,
-                slidesToScroll: 1
-            }
-        },
-        {
-            breakpoint: 480,
-            settings: {
-                dots: true,
-                arrows: false,
-                slidesToShow: 1,
-                slidesToScroll: 1
-            }
-        }
-    ]
-});
-
-// platform_fearues
-$('.feature_carousel').slick({
-    dots: false,
-    arrows: true,
-    infinite: true,
-    cssEase: 'linear',
-    speed: 300,
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    responsive: [
-        {
-            breakpoint: 1024,
-            settings: {
-                dots: true,
-                arrows: false,
-                slidesToShow: 1,
-                slidesToScroll: 1
-            }
-        },
-        {
-            breakpoint: 800,
-            settings: {
-                dots: true,
-                arrows: false,
-                slidesToShow: 1,
-                slidesToScroll: 1
-            }
-        },
-        {
-            breakpoint: 480,
-            settings: {
-                dots: true,
-                arrows: false,
-                slidesToShow: 1,
-                slidesToScroll: 1
-            }
-        }
-    ]
-});
-
-
-
-
 
 
 
