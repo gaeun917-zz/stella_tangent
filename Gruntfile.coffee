@@ -3,7 +3,6 @@ module.exports = (grunt) ->
   grunt.initConfig
 
     # ::: BASE TASKS :::
-
     # Compiles SASS to CSS
     sass:
       compile:
@@ -18,7 +17,6 @@ module.exports = (grunt) ->
       dist:
         files:
           'pub/css/styles.css':'pub/css/styles.css'
-
 
     # Compiles Coffee to JS
     coffee:

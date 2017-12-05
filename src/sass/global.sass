@@ -1,13 +1,15 @@
 *:focus
   outline: 0
-
-a:hover
-  color: #2980b9
-
 *,
 *:before,
 *:after
   box-sizing: border-box
+
+a:focus,
+a:hover,
+.card.slick-slide
+  color: white
+  outline: 0 !important
 
 /** * START: Eric Meyer's Reset CSS v2.0 (https://meyerweb.com/eric/tools/css/reset/) * http://cssreset.com */
 html, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, address, big, cite, code, del, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, section, summary, time, mark, audio, video
@@ -18,7 +20,7 @@ html, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, 
   font: inherit
   vertical-align: baseline
 
-/* START: HTML5 display-role reset for older browsers */
+/* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section
   display: block
 
@@ -43,71 +45,33 @@ table
 
 body
   font-family: 'Raleway', sans-serif
+  letter-spacing: 1px
   width: 100%
-  color: #2980b9
-  display: block
+  color: #434242
   word-wrap: break-word
   overflow-x: hidden
 
 section
   font-size: .9rem
-  //overflow-x: hidden
-  //overflow-y: hidden
 
 h1
-    font-weight: 100
-    font-size: 36px
-    margin-bottom: .8rem
-    margin: 0 auto
+  font-weight: 400
+  font-size: 1.3rem
+  text-transform: uppercase
+  border-top: 2px solid $green
+  width: fit-content
+  letter-spacing: .1rem
+  padding: 1rem
+  margin: 0 auto
 
 p
   font-weight: 400
-  font-size: 1rem
-  color: #434242 // new black
-
-button:focus
-  outline: 0
-
-a:focus,
-a:hover,
-.card.slick-slide
-  color: white
-  outline: 0 !important
-
-// burger menu
-.navbar-light .navbar-toggler
-  border-color: transparent
-  margin-top: 15px
-
-//button
-.btn-circle-blue
-  background-color: #2980b9
-  font-weight: 200
-  color: #fff
-  width: 170px
-  height: 40px
-  font-size: 16px
-  border-radius: 0
-  cursor: pointer
-  line-height: 1.3rem
-  &:hover, &:focus
-    color: #fff
-
-.btn-circle-white
-  background-color: white
-  font-weight: 200
-  color: #2980b9
-  width: 170px
-  height: 40px
-  font-size: 16px
-  border-radius: 0
-  cursor: pointer
-  line-height: 1.3rem
-  margin: 0 auto
-  display: block
-  &:hover, &:focus
-    background-color: white
-    color: #2980b9
+  font-size: .8rem
+  color: #434242
+  line-height: 1.4rem
+  padding-bottom: 7%
+  .white
+    color: white
 
 .header
   .btn.btn-circle-white
@@ -129,180 +93,252 @@ a:hover,
 .card
   -webkit-box-shadow: 0px 4px 2px 0px rgba(41, 128, 184, 0.1)
   -moz-box-shadow: 0px 4px 2px 0px rgba(41, 128, 184, 0.1)
-    box-shadow: 0px 4px 2px 0px rgba(41, 128, 184, 0.1)
+  box-shadow: 0px 4px 2px 0px rgba(41, 128, 184, 0.1)
   margin-bottom: 10px
   margin-right: 25px
   margin-left: 25px
 
-//triangle
-.bespoke
-  .swipe-tab:after
-    content: ''
-    z-index: 1000
-    margin: 0 auto
-    display: inline-block
-    height: 0
-    border-left: 10px solid transparent
-    border-right: 10px solid transparent
-    border-top: 10px solid rgba(41, 128, 184, .5)
-    clear: both
-    top: 50px
-    position: absolute
-
-.bespoke
-  .main_div-right
-    .footer:before
-      margin-right: 10px
-    .product_li:after
-      float: right
-      margin-top: 20px
-      margin-right: 5px
-
-.bespoke
-  .slick-dots
-    li
-      button:before
-        color: rgb(177, 31, 55)
-        margin: 20px 0
-    li.slick-active
-      button:before
-        opacity: 1
-        color: rgb(177, 31, 55)
-
-#arrow-blue
-  content: ">"
-  background-color: #2980b9
-  text-align: center
-  color: white
-  padding-left: 0
-  margin-left: 10px
-  padding-bottom: 10px
-  font-size: 10px
-  width: 15px
-  height: 15px
-  line-height: 14px
-  display: inline-block
-  font-weight: 200
-  border-radius: 50%
-  position: relative
-  transform: translateY(-15%)
-  top: 50%
-
 // slicker margin
 .slick-dotted.slick-slider
-  padding: 0 15px
   margin-bottom: 40px
+.most_loved
+  .slick-slide img
+      border: 1px solid $gray
+      padding: 3rem
 
-// slicker arrow
-.slick-prev.slick-arrow,
-.slick-next.slick-arrow
-  //display: flex
-  position: absolute
-  bottom: 0
-  display: -webkit-box
-  display: -webkit-flex
-  display: -ms-flexbox
-  display: flex
-  -webkit-box-align: center
-  -webkit-align-items: center
-  -ms-flex-align: center
-  align-items: center
-  -webkit-box-pack: center
-  -webkit-justify-content: center
-  -ms-flex-pack: center
-  justify-content: center
-  width: 17%
-  height: inherit
-  text-align: center
-  z-index: 999
-.slick-prev.slick-arrow
-  margin-left: 100px
-.slick-next.slick-arrow
-  margin-right: 100px
-
-.slick-prev.slick-arrow:before
-  content: ''
-  background: url(../img/left_arrow-blue.png) no-repeat
-  background-size: 36px
-  width: 50px
-  height: 67px
-  z-index: 999
-
-.slick-next.slick-arrow:before
-  content: ''
-  background: url(../img/right_arrow-blue.png) no-repeat
-  background-size: 36px
-  width: 50px
-  height: 67px
-  z-index: 999
-
-// START: dot indicator
+// dot indicator
 .slick-dots
   display: block
   position: static
   li
-    button
-      width: 30px
-      height: 30px
     button:before
-      font-size: 18px
+      font-size: 35px
       margin: 35px 0
-      opacity: .2
-      color: white
+      color: $gray
   li.slick-active
     button:before
-      opacity: 1
-      color: white
-
-
-//.impact_carousel
-//  .slick-dots
-//    li
-//      button:before
-//        color: rgb(177, 31, 55)
-//        margin: 20px 0
-//    li.slick-active
-//      button:before
-//        opacity: 1
-//        color: rgb(177, 31, 55)
-
-//.magento
-//  .slick-dots
-//    li
-//      button:before
-//        color: rgb(177, 31, 55)
-//        margin: 38px 0
-//    li.slick-active
-//      button:before
-//        opacity: 1
-//        color: rgb(177, 31, 55)
-
-//.platform_user
-//  .slick-dots
-//    li
-//      button:before
-//        color: rgb(177, 31, 55)
-//        margin: 20px 0
-//    li.slick-active
-//      button:before
-//        opacity: 1
-//        color: rgb(177, 31, 55)
-// END: dot indicator
-
+      color: $hot_pink
 
 .card_carousel.slick-slider
   margin: 40px 0 80px 0
 
-.slick-list.draggable
-  max-width: 1200px
-  margin: 0 auto
+// bouncing
+@-webkit-keyframes hotspot-vertical-top
+  0%,
+  30%,
+  40%,
+  53.3%,
+  66.667%,
+  100%
+    -webkit-transform: translate3d(0, 0, 0)
+    -moz-transform: translate3d(0, 0, 0)
+    -ms-transform: translate3d(0, 0, 0)
+    -o-transform: translate3d(0, 0, 0)
+    transform: translate3d(0, 0, 0)
+    -webkit-animation-timing-function: ease-out
+    -moz-animation-timing-function: ease-out
+    -ms-animation-timing-function: ease-out
+    -o-animation-timing-function: ease-out
+    animation-timing-function: ease-out
+  35%
+    -webkit-transform: translate3d(0, 25px, 0)
+    -moz-transform: translate3d(0, 25px, 0)
+    -ms-transform: translate3d(0, 25px, 0)
+    -o-transform: translate3d(0, 25px, 0)
+    transform: translate3d(0, 25px, 0)
+    -webkit-animation-timing-function: ease-in
+    -moz-animation-timing-function: ease-in
+    -ms-animation-timing-function: ease-in
+    -o-animation-timing-function: ease-in
+    animation-timing-function: ease-in
+
+  46.667%
+    -webkit-transform: translate3d(0, 12.5px, 0)
+    -moz-transform: translate3d(0, 12.5px, 0)
+    -ms-transform: translate3d(0, 12.5px, 0)
+    -o-transform: translate3d(0, 12.5px, 0)
+    transform: translate3d(0, 12.5px, 0)
+    -webkit-animation-timing-function: ease-in
+    -moz-animation-timing-function: ease-in
+    -ms-animation-timing-function: ease-in
+    -o-animation-timing-function: ease-in
+    animation-timing-function: ease-in
+
+  60%
+    -webkit-transform: translate3d(0, 6.25px, 0)
+    -moz-transform: translate3d(0, 6.25px, 0)
+    -ms-transform: translate3d(0, 6.25px, 0)
+    -o-transform: translate3d(0, 6.25px, 0)
+    transform: translate3d(0, 6.25px, 0)
+    -webkit-animation-timing-function: ease-in
+    -moz-animation-timing-function: ease-in
+    -ms-animation-timing-function: ease-in
+    -o-animation-timing-function: ease-in
+    animation-timing-function: ease-in
+
+
+@-moz-keyframes hotspot-vertical-top
+  0%,
+  30%,
+  40%,
+  53.3%,
+  66.667%,
+  100%
+    -webkit-transform: translate3d(0, 0, 0)
+    -moz-transform: translate3d(0, 0, 0)
+    -ms-transform: translate3d(0, 0, 0)
+    -o-transform: translate3d(0, 0, 0)
+    transform: translate3d(0, 0, 0)
+    -webkit-animation-timing-function: ease-out
+    -moz-animation-timing-function: ease-out
+    -ms-animation-timing-function: ease-out
+    -o-animation-timing-function: ease-out
+    animation-timing-function: ease-out
+
+  35%
+    -webkit-transform: translate3d(0, 25px, 0)
+    -moz-transform: translate3d(0, 25px, 0)
+    -ms-transform: translate3d(0, 25px, 0)
+    -o-transform: translate3d(0, 25px, 0)
+    transform: translate3d(0, 25px, 0)
+    -webkit-animation-timing-function: ease-in
+    -moz-animation-timing-function: ease-in
+    -ms-animation-timing-function: ease-in
+    -o-animation-timing-function: ease-in
+    animation-timing-function: ease-in
+
+  46.667%
+    -webkit-transform: translate3d(0, 12.5px, 0)
+    -moz-transform: translate3d(0, 12.5px, 0)
+    -ms-transform: translate3d(0, 12.5px, 0)
+    -o-transform: translate3d(0, 12.5px, 0)
+    transform: translate3d(0, 12.5px, 0)
+    -webkit-animation-timing-function: ease-in
+    -moz-animation-timing-function: ease-in
+    -ms-animation-timing-function: ease-in
+    -o-animation-timing-function: ease-in
+    animation-timing-function: ease-in
+
+  60%
+    -webkit-transform: translate3d(0, 6.25px, 0)
+    -moz-transform: translate3d(0, 6.25px, 0)
+    -ms-transform: translate3d(0, 6.25px, 0)
+    -o-transform: translate3d(0, 6.25px, 0)
+    transform: translate3d(0, 6.25px, 0)
+    -webkit-animation-timing-function: ease-in
+    -moz-animation-timing-function: ease-in
+    -ms-animation-timing-function: ease-in
+    -o-animation-timing-function: ease-in
+    animation-timing-function: ease-in
 
 
 
-//text blurry issue
-     -webkit-transform: translate3d(0,0,1px)
-     -moz-transform: translate3d(0,0,1px)
-     -ms-transform: translate3d(0,0,1px)
-     -o-transform: translate3d(0,0,1px)
-     transform: translate3d(0,0,1px)
+@-ms-keyframes hotspot-vertical-top
+  0%,
+  30%,
+  40%,
+  53.3%,
+  66.667%,
+  100%
+    -webkit-transform: translate3d(0, 0, 0)
+    -moz-transform: translate3d(0, 0, 0)
+    -ms-transform: translate3d(0, 0, 0)
+    -o-transform: translate3d(0, 0, 0)
+    transform: translate3d(0, 0, 0)
+    -webkit-animation-timing-function: ease-out
+    -moz-animation-timing-function: ease-out
+    -ms-animation-timing-function: ease-out
+    -o-animation-timing-function: ease-out
+    animation-timing-function: ease-out
 
+  35%
+    -webkit-transform: translate3d(0, 25px, 0)
+    -moz-transform: translate3d(0, 25px, 0)
+    -ms-transform: translate3d(0, 25px, 0)
+    -o-transform: translate3d(0, 25px, 0)
+    transform: translate3d(0, 25px, 0)
+    -webkit-animation-timing-function: ease-in
+    -moz-animation-timing-function: ease-in
+    -ms-animation-timing-function: ease-in
+    -o-animation-timing-function: ease-in
+    animation-timing-function: ease-in
+
+  46.667%
+    -webkit-transform: translate3d(0, 12.5px, 0)
+    -moz-transform: translate3d(0, 12.5px, 0)
+    -ms-transform: translate3d(0, 12.5px, 0)
+    -o-transform: translate3d(0, 12.5px, 0)
+    transform: translate3d(0, 12.5px, 0)
+    -webkit-animation-timing-function: ease-in
+    -moz-animation-timing-function: ease-in
+    -ms-animation-timing-function: ease-in
+    -o-animation-timing-function: ease-in
+    animation-timing-function: ease-in
+
+  60%
+    -webkit-transform: translate3d(0, 6.25px, 0)
+    -moz-transform: translate3d(0, 6.25px, 0)
+    -ms-transform: translate3d(0, 6.25px, 0)
+    -o-transform: translate3d(0, 6.25px, 0)
+    transform: translate3d(0, 6.25px, 0)
+    -webkit-animation-timing-function: ease-in
+    -moz-animation-timing-function: ease-in
+    -ms-animation-timing-function: ease-in
+    -o-animation-timing-function: ease-in
+    animation-timing-function: ease-in
+
+
+
+@keyframes hotspot-vertical-top
+  0%,
+  30%,
+  40%,
+  53.3%,
+  66.667%,
+  0%
+    -webkit-transform: translate3d(0, 0, 0)
+    -moz-transform: translate3d(0, 0, 0)
+    -ms-transform: translate3d(0, 0, 0)
+    -o-transform: translate3d(0, 0, 0)
+    transform: translate3d(0, 0, 0)
+    -webkit-animation-timing-function: ease-out
+    -moz-animation-timing-function: ease-out
+    -ms-animation-timing-function: ease-out
+    -o-animation-timing-function: ease-out
+    animation-timing-function: ease-out
+
+  35%
+    -webkit-transform: translate3d(0, 25px, 0)
+    -moz-transform: translate3d(0, 25px, 0)
+    -ms-transform: translate3d(0, 25px, 0)
+    -o-transform: translate3d(0, 25px, 0)
+    transform: translate3d(0, 25px, 0)
+    -webkit-animation-timing-function: ease-in
+    -moz-animation-timing-function: ease-in
+    -ms-animation-timing-function: ease-in
+    -o-animation-timing-function: ease-in
+    animation-timing-function: ease-in
+
+  46.667%
+    -webkit-transform: translate3d(0, 12.5px, 0)
+    -moz-transform: translate3d(0, 12.5px, 0)
+    -ms-transform: translate3d(0, 12.5px, 0)
+    -o-transform: translate3d(0, 12.5px, 0)
+    transform: translate3d(0, 12.5px, 0)
+    -webkit-animation-timing-function: ease-in
+    -moz-animation-timing-function: ease-in
+    -ms-animation-timing-function: ease-in
+    -o-animation-timing-function: ease-in
+    animation-timing-function: ease-in
+
+  60%
+    -webkit-transform: translate3d(0, 6.25px, 0)
+    -moz-transform: translate3d(0, 6.25px, 0)
+    -ms-transform: translate3d(0, 6.25px, 0)
+    -o-transform: translate3d(0, 6.25px, 0)
+    transform: translate3d(0, 6.25px, 0)
+    -webkit-animation-timing-function: ease-in
+    -moz-animation-timing-function: ease-in
+    -ms-animation-timing-function: ease-in
+    -o-animation-timing-function: ease-in
+    animation-timing-function: ease-in
